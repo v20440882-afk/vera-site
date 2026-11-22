@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Калькулятор долей детям при маткапитале — покупка и продажа квартиры</title>
+<meta name="description" content="Какие доли выделить детям, если в квартиру вложен маткапитал: расчёт при покупке, доли в новом жилье для согласия опеки при продаже и налог с продажи.">
+<link rel="canonical" href="https://vera-nvkz.ru/kalkulyator-doley-detyam/">
+<meta property="og:title" content="Калькулятор долей детям при маткапитале — покупка и продажа квартиры">
+<meta property="og:description" content="Какие доли выделить детям, если в квартиру вложен маткапитал: расчёт при покупке, доли в новом жилье для согласия опеки при продаже и налог с продажи.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://vera-nvkz.ru/kalkulyator-doley-detyam/">
+<meta property="og:image" content="https://vera-nvkz.ru/img/og.jpg">
+<meta name="theme-color" content="#1f4e8c">
+<link rel="icon" type="image/png" sizes="48x48" href="/img/icon-48.png">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<meta name="yandex-verification" content="f1f6ceddd32f1ae6">
+
+</head>
+<body>
+<nav style="max-width:1180px;margin:0 auto 18px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;font:500 14px Inter,system-ui,sans-serif"><a href="/" style="color:inherit;text-decoration:none"><b>Вера Устьянцева</b> · недвижимость в Новокузнецке</a><span style="display:flex;gap:14px;flex-wrap:wrap"><a href="/kalkulyator-semeynoy-ipoteki/" style="color:inherit">Семейная ипотека</a><a href="/kalkulyator-matkapitala/" style="color:inherit">Материнский капитал</a><a href="/" style="color:inherit">На сайт →</a></span></nav>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap">
+<style>
+/* Layout: Vera's brand landing, third of the calculator family — hero with mode switch, inputs left, shares right, reviews and contact */
+:root {
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --panel-2: #eef3fa;
+  --line: #d6e0ee;
+  --ink: #1e2a38;
+  --muted: #5b6b80;
+  --accent: #1f4e8c;
+  --accent-ink: #ffffff;
+  --gold: #f2b544;
+  --gold-ink: #1e2a38;
+  --tint: #dce8f5;
+  --good: #1e8a57;
+  --warn: #b26a12;
+  --bad: #c0392b;
+  --c1: #1f4e8c; --c2: #8fb0e3; --c3: #2fa36b; --c4: #f2b544; --c5: #8e63c9; --c6: #2aa7b1; --c7: #c99a3e; --c8: #d9534f;
+  --font-display: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 16px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1724; --panel: #162235; --panel-2: #111b2b; --line: #263650; --ink: #e8edf5; --muted: #9aa8bd;
+  --accent: #7aa3e6; --accent-ink: #0f1724; --gold: #f2b544; --gold-ink: #1e2a38; --tint: #1c2c45;
+  --good: #3ed49a; --warn: #f2b544; --bad: #f2726b;
+  --c1: #7aa3e6; --c2: #a3bdf7; --c3: #3ed49a; --c4: #f2b544; --c5: #c792ea; --c6: #4fd1d9; --c7: #e5c07b; --c8: #f2726b; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f1724; --panel: #162235; --panel-2: #111b2b; --line: #263650; --ink: #e8edf5; --muted: #9aa8bd;
+  --accent: #7aa3e6; --accent-ink: #0f1724; --gold: #f2b544; --gold-ink: #1e2a38; --tint: #1c2c45;
+  --good: #3ed49a; --warn: #f2b544; --bad: #f2726b;
+  --c1: #7aa3e6; --c2: #a3bdf7; --c3: #3ed49a; --c4: #f2b544; --c5: #c792ea; --c6: #4fd1d9; --c7: #e5c07b; --c8: #f2726b; color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; gap: 22px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; min-width: 0; }
+header.card { display: grid; gap: 10px; padding: 26px; }
+.chip { justify-self: start; font-size: 12.5px; font-weight: 600; color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, transparent); padding: 4px 12px; border-radius: 8px; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); max-width: 72ch; margin: 0; font-size: 16px; }
+.mode { max-width: 520px; }
+.grid { display: grid; grid-template-columns: minmax(300px, 420px) 1fr; gap: 22px; align-items: start; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+.col { display: grid; gap: 22px; min-width: 0; }
+.sec-title { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 14px; }
+.form-card { display: grid; gap: 16px; }
+.field { display: grid; gap: 7px; min-width: 0; }
+.field > label, .field > .label { font-size: 14px; color: var(--muted); }
+.hint { font-size: 12.5px; color: var(--muted); }
+.hint b { color: var(--ink); }
+.hint.warn { color: var(--warn); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.inp, select {
+  width: 100%; height: 48px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
+  font: 500 16px var(--font-body); padding: 0 14px; font-variant-numeric: tabular-nums; outline: none;
+}
+.inp:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 4px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { text-align: center; padding: 9px 4px; border-radius: 7px; cursor: pointer; font-size: 15px; color: var(--muted); }
+.seg label:hover { color: var(--ink); }
+.seg input:checked + label { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.seg input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mode.seg label { padding: 12px 6px; font-size: 16px; }
+.link-btn { justify-self: start; background: none; border: 0; padding: 0; color: var(--accent); font: 500 13.5px var(--font-body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.link-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.summary { display: grid; gap: 16px; }
+.summary .k { color: var(--muted); font-size: 14px; }
+.summary .v { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 4.2vw, 38px); line-height: 1.15; color: var(--good); font-variant-numeric: tabular-nums; }
+.summary .v small { font-family: var(--font-body); font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 8px; }
+.alert { border: 1.5px solid var(--bad); }
+.alert .v { color: var(--bad); font-size: clamp(20px, 3vw, 24px); }
+.stack { display: flex; height: 22px; border-radius: 7px; overflow: hidden; background: var(--panel-2); gap: 2px; }
+.stack i { display: block; height: 100%; min-width: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; }
+
+h2 { font-size: 17px; font-weight: 600; margin: 0 0 14px; color: var(--ink); }
+.tbl-box { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+th, td { padding: 11px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-size: 13px; font-weight: 500; color: var(--muted); white-space: normal; vertical-align: bottom; }
+tbody tr:last-child td { border-bottom: 0; }
+tfoot td { font-weight: 700; border-top: 1px solid var(--line); border-bottom: 0; }
+td.frac { font-weight: 700; font-size: 16px; }
+td .sub { display: block; font-size: 12px; color: var(--muted); font-weight: 400; }
+.note { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.box { margin-top: 14px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; font-size: 14px; color: var(--muted); }
+.box b { color: var(--ink); }
+.box.warn { background: color-mix(in srgb, var(--warn) 7%, var(--panel-2)); border-color: color-mix(in srgb, var(--warn) 30%, var(--line)); }
+.formula { font-size: 14px; color: var(--muted); display: grid; gap: 6px; }
+.formula code { font-family: var(--font-body); color: var(--ink); background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; display: block; font-variant-numeric: tabular-nums; overflow-x: auto; }
+
+.export { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px; }
+.export p { margin: 0; color: var(--muted); font-size: 14px; max-width: 46ch; }
+.export p b { color: var(--ink); }
+.btn { height: 48px; padding: 0 22px; border-radius: 10px; border: 0; background: var(--accent); color: var(--accent-ink); font: 600 16px var(--font-body); cursor: pointer; }
+.btn:hover:not(:disabled) { filter: brightness(1.1); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn:disabled { opacity: .55; cursor: default; }
+#export-status { flex-basis: 100%; font-size: 13px; color: var(--muted); }
+#export-status.err { color: var(--bad); }
+#export-status.ok { color: var(--good); }
+ul.facts { margin: 0; padding-left: 20px; display: grid; gap: 10px; color: var(--muted); }
+ul.facts b { color: var(--ink); }
+.owners { display: grid; gap: 8px; }
+.owner { display: grid; grid-template-columns: 1fr 110px 40px; gap: 10px; align-items: center; }
+.owner .inp { height: 42px; }
+.owner .inp.sh { text-align: center; }
+.icon-btn { width: 40px; height: 42px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--muted); font-size: 18px; cursor: pointer; }
+.icon-btn:hover { color: var(--bad); border-color: var(--bad); }
+.icon-btn:disabled { opacity: .35; cursor: default; color: var(--muted); border-color: var(--line); }
+.add-btn { height: 42px; border-radius: 10px; border: 1px dashed var(--line); background: transparent; color: var(--accent); font: 500 15px var(--font-body); cursor: pointer; }
+.add-btn:hover { border-color: var(--accent); }
+.icon-btn:focus-visible, .add-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.check { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; font-size: 14px; cursor: pointer; }
+.check input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--accent); }
+.check span small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.summary.free { border: 1.5px solid var(--good); }
+.summary.pay { border: 1.5px solid var(--warn); }
+.summary.pay .v { color: var(--warn); }
+td.ok { color: var(--good); }
+td.due { color: var(--warn); font-weight: 700; }
+.deadline { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.deadline b { color: var(--ink); }
+.foot { font-size: 12.5px; color: var(--muted); margin: 0; max-width: 90ch; }
+
+/* Brand blocks */
+.hero { display: grid; grid-template-columns: 1fr minmax(180px, 280px); gap: 26px; align-items: center; padding: 30px; background: linear-gradient(135deg, var(--panel) 55%, var(--tint)); }
+@media (max-width: 760px) { .hero { grid-template-columns: 1fr; } .hero .photo { order: -1; max-width: 220px; } }
+.hero .txt { display: grid; gap: 14px; min-width: 0; }
+.hero h1 { font-size: clamp(24px, 3.6vw, 36px); font-weight: 800; color: var(--ink); }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.photo { margin: 0; border-radius: 20px; overflow: hidden; aspect-ratio: 3 / 4; max-width: 100%; background: var(--tint); box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 18%, transparent); }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
+.who { display: grid; gap: 2px; padding-top: 6px; border-top: 1px solid var(--line); }
+.who b { font-family: var(--font-display); font-size: 17px; }
+.who span { color: var(--muted); font-size: 14px; }
+.facts-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 99px; background: var(--tint); color: var(--accent); }
+.strip { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: var(--gold); color: var(--gold-ink); border-radius: var(--radius); padding: 16px 22px; font-size: 16px; }
+.strip b { font-family: var(--font-display); font-size: 18px; }
+.cta { display: grid; gap: 12px; border: 1.5px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--panel)); }
+.cta h2 { margin: 0; font-family: var(--font-display); font-size: 20px; }
+.cta p { margin: 0; color: var(--muted); }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.handle { font: 700 20px var(--font-display); color: var(--accent); user-select: all; }
+.btn-link { display: inline-flex; align-items: center; height: 46px; padding: 0 20px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font: 600 15px var(--font-body); text-decoration: none; }
+.btn-ghost { display: inline-flex; align-items: center; height: 46px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); font: 500 15px var(--font-body); cursor: pointer; text-decoration: none; }
+.btn-link:focus-visible, .btn-ghost:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.copied { font-size: 13px; color: var(--good); }
+.reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.review { margin: 0; background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 8px; }
+.review p { margin: 0; font-size: 15px; }
+.review cite { font-style: normal; font-size: 13px; color: var(--muted); }
+</style>
+
+<div class="wrap">
+  <header class="card hero">
+   <div class="txt">
+    <span class="chip">Новокузнецк · маткапитал и доли детей</span>
+    <h1>Какие <em>доли детям</em> нужно выделить, если в квартиру вложен маткапитал</h1>
+    <p class="lead">При покупке калькулятор покажет долю каждого члена семьи. При продаже посчитает, какую долю детям дать в новом жилье, чтобы опека дала согласие, и сколько налога заплатит каждый собственник. Сложный случай? Напишите мне, разберём вместе.</p>
+    <div class="who">
+      <b>Вера Устьянцева</b>
+      <span>специалист по недвижимости, Новокузнецк</span>
+    </div>
+    <div class="facts-row">
+      <span class="pill">6 лет в недвижимости</span>
+      <span class="pill">200+ сделок</span>
+      <span class="pill">сделки с маткапиталом и опекой</span>
+    </div>
+    <div class="seg mode" role="radiogroup" aria-label="Что считаем">
+      <input type="radio" name="mode" id="mode-buy" value="buy" checked><label for="mode-buy">Покупка</label>
+      <input type="radio" name="mode" id="mode-sell" value="sell"><label for="mode-sell">Продажа</label>
+      <input type="radio" name="mode" id="mode-tax" value="tax"><label for="mode-tax">Налог</label>
+    </div>
+   </div>
+   <figure class="photo"><img src="vera-doli-2.jpg" alt="Вера Устьянцева, специалист по недвижимости"></figure>
+  </header>
+
+  <div class="strip"><b>Новостройку со мной вы покупаете без комиссии</b><span>— по цене застройщика. Доли, опека, маткапитал и сделка до ключей — на мне.</span></div>
+
+  <form class="grid" id="form" autocomplete="off">
+    <!-- ===== Покупка: ввод ===== -->
+    <div class="col" data-mode="buy">
+      <div class="card form-card">
+        <h3 class="sec-title">Семья</h3>
+        <div class="field">
+          <span class="label">Владелец сертификата</span>
+          <div class="seg">
+            <input type="radio" name="holder" id="h-m" value="m" checked><label for="h-m">Мама</label>
+            <input type="radio" name="holder" id="h-f" value="f"><label for="h-f">Папа</label>
+          </div>
+        </div>
+        <div class="field">
+          <span class="label">Брак на момент покупки</span>
+          <div class="seg">
+            <input type="radio" name="married" id="mr-y" value="1" checked><label for="mr-y">В браке</label>
+            <input type="radio" name="married" id="mr-n" value="0"><label for="mr-n">Не в браке</label>
+          </div>
+        </div>
+        <div class="field" id="rest-field" hidden>
+          <label for="rest">Остальную часть стоимости оплачивает</label>
+          <select id="rest">
+            <option value="holder">Владелец сертификата</option>
+            <option value="other">Второй родитель</option>
+            <option value="half">Оба родителя поровну</option>
+          </select>
+          <span class="hint">Без брака второй родитель не получает долю из маткапитала, только из своих денег.</span>
+        </div>
+        <div class="field">
+          <span class="label">Детей в семье на момент покупки</span>
+          <div class="seg">
+            <input type="radio" name="kids" id="k1" value="1"><label for="k1">1</label>
+            <input type="radio" name="kids" id="k2" value="2" checked><label for="k2">2</label>
+            <input type="radio" name="kids" id="k3" value="3"><label for="k3">3</label>
+            <input type="radio" name="kids" id="k4" value="4"><label for="k4">4</label>
+            <input type="radio" name="kids" id="k5" value="5"><label for="k5">5</label>
+            <input type="radio" name="kids" id="k6" value="6"><label for="k6">6</label>
+          </div>
+          <span class="hint">Все дети, включая старших и детей от прошлых браков владельца сертификата.</span>
+        </div>
+      </div>
+
+      <div class="card form-card">
+        <h3 class="sec-title">Жильё</h3>
+        <div class="field">
+          <label for="price">Стоимость жилья по договору, ₽</label>
+          <input class="inp" id="price" inputmode="numeric" value="6 500 000">
+        </div>
+        <div class="field">
+          <label for="msk">Маткапитал, вложенный в жильё, ₽</label>
+          <input class="inp" id="msk" inputmode="numeric" value="963 243">
+          <span class="hint">Сумма, которую Соцфонд перечислил на эту покупку или на погашение этой ипотеки.</span>
+        </div>
+        <div class="field">
+          <label for="area">Общая площадь, м²</label>
+          <input class="inp" id="area" inputmode="decimal" value="54,3">
+        </div>
+        <div class="field">
+          <span class="label">Как записать доли</span>
+          <div class="seg">
+            <input type="radio" name="den" id="d100" value="100" checked><label for="d100">Сотые</label>
+            <input type="radio" name="den" id="d1000" value="1000"><label for="d1000">Тысячные</label>
+            <input type="radio" name="den" id="dex" value="exact"><label for="dex">Точно</label>
+          </div>
+          <span class="hint">При округлении доли детей округляются вверх, в их пользу. Так обычно требуют нотариусы и Росреестр.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Покупка: результат ===== -->
+    <div class="col" data-mode="buy" aria-live="polite">
+      <section class="card summary" id="b-summary">
+        <div><div class="k" id="b-k">Доля каждого ребёнка</div><div class="v" id="b-v">—</div></div>
+        <div class="stack" id="b-stack"></div>
+        <div class="legend" id="b-legend"></div>
+      </section>
+
+      <section class="card">
+        <h2>Доли членов семьи</h2>
+        <div class="tbl-box">
+          <table>
+            <thead><tr><th>Кто</th><th>Доля</th><th>В процентах</th><th>В рублях</th><th>В м²</th></tr></thead>
+            <tbody id="b-rows"></tbody>
+            <tfoot id="b-foot"></tfoot>
+          </table>
+        </div>
+        <p class="note" id="b-note"></p>
+      </section>
+
+      <section class="card cta">
+        <h2>Покупаете с маткапиталом?</h2>
+        <p>Проверю расчёт долей, подготовлю сделку так, чтобы Соцфонд и Росреестр приняли документы с первого раза, и подберу квартиру под ваш бюджет.</p>
+        <div class="cta-row">
+          <span class="handle">@Wera80</span>
+          <a class="btn-link" href="https://t.me/Wera80" target="_blank" rel="noopener">Написать в Telegram</a>
+          <button type="button" class="btn-ghost copy" data-copy="@Wera80">Скопировать ник</button>
+          <span class="copied" hidden></span>
+        </div>
+        <div class="cta-row">
+          <span class="handle">+7 983 212-69-54</span>
+          <a class="btn-link" href="tel:+79832126954">Позвонить</a>
+          <a class="btn-ghost" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
+          <span class="copied" hidden></span>
+        </div>
+        <p class="hint" style="margin:0">К этому номеру привязаны все мессенджеры: WhatsApp, Telegram, MAX — пишите, где вам удобно.</p>
+      </section>
+
+      <section class="card formula">
+        <h2>Как считается</h2>
+        <span>Маткапитал делится поровну между всеми членами семьи: владельцем сертификата, его супругом и всеми детьми. Остальная часть жилья принадлежит родителям, которые за неё заплатили. Так считают по разъяснениям Верховного суда.</span>
+        <code id="b-formula">—</code>
+      </section>
+    </div>
+
+    <!-- ===== Продажа: ввод ===== -->
+    <div class="col" data-mode="sell" hidden>
+      <div class="card form-card">
+        <h3 class="sec-title">Продаём</h3>
+        <div class="two">
+          <div class="field">
+            <label for="s-price">Цена продажи, ₽</label>
+            <input class="inp" id="s-price" inputmode="numeric" value="7 200 000">
+          </div>
+          <div class="field">
+            <label for="s-area">Площадь, м²</label>
+            <input class="inp" id="s-area" inputmode="decimal" value="54,3">
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="s-share">Доля каждого ребёнка</label>
+            <input class="inp" id="s-share" value="8/100">
+          </div>
+          <div class="field">
+            <label for="s-kids">Детей с долями</label>
+            <input class="inp" id="s-kids" inputmode="numeric" value="2">
+          </div>
+        </div>
+        <button type="button" class="link-btn" id="s-take">Взять доли из расчёта покупки</button>
+        <span class="hint">Долю пишите дробью, как в выписке ЕГРН: 8/100 или 1/12.</span>
+      </div>
+
+      <div class="card form-card">
+        <h3 class="sec-title">Покупаем взамен</h3>
+        <div class="two">
+          <div class="field">
+            <label for="n-price">Цена нового жилья, ₽</label>
+            <input class="inp" id="n-price" inputmode="numeric" value="9 500 000">
+          </div>
+          <div class="field">
+            <label for="n-area">Площадь, м²</label>
+            <input class="inp" id="n-area" inputmode="decimal" value="68">
+          </div>
+        </div>
+        <div class="field">
+          <span class="label">Как записать новые доли</span>
+          <div class="seg">
+            <input type="radio" name="nden" id="nd100" value="100" checked><label for="nd100">Сотые</label>
+            <input type="radio" name="nden" id="nd1000" value="1000"><label for="nd1000">Тысячные</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Продажа: результат ===== -->
+    <div class="col" data-mode="sell" hidden aria-live="polite">
+      <section class="card summary" id="s-summary">
+        <div><div class="k">Минимальная доля каждого ребёнка в новом жилье</div><div class="v" id="s-v">—</div></div>
+        <div class="stack" id="s-stack"></div>
+        <div class="legend" id="s-legend"></div>
+      </section>
+
+      <section class="card">
+        <h2>Что теряет и что получает ребёнок</h2>
+        <div class="tbl-box">
+          <table>
+            <thead><tr><th></th><th>Доля</th><th>В рублях</th><th>В м²</th></tr></thead>
+            <tbody id="s-rows"></tbody>
+          </table>
+        </div>
+        <div class="box" id="s-box"></div>
+      </section>
+
+      <section class="card cta">
+        <h2>Продаёте квартиру с долями детей?</h2>
+        <p>Помогу получить согласие опеки, подобрать новое жильё и провести продажу и покупку одновременно, чтобы не остаться без квартиры.</p>
+        <div class="cta-row">
+          <span class="handle">@Wera80</span>
+          <a class="btn-link" href="https://t.me/Wera80" target="_blank" rel="noopener">Написать в Telegram</a>
+          <button type="button" class="btn-ghost copy" data-copy="@Wera80">Скопировать ник</button>
+          <span class="copied" hidden></span>
+        </div>
+        <div class="cta-row">
+          <span class="handle">+7 983 212-69-54</span>
+          <a class="btn-link" href="tel:+79832126954">Позвонить</a>
+          <a class="btn-ghost" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
+          <span class="copied" hidden></span>
+        </div>
+        <p class="hint" style="margin:0">К этому номеру привязаны все мессенджеры: WhatsApp, Telegram, MAX — пишите, где вам удобно.</p>
+      </section>
+    </div>
+
+    <!-- ===== Налог: ввод ===== -->
+    <div class="col" data-mode="tax" hidden>
+      <div class="card form-card">
+        <h3 class="sec-title">Продажа</h3>
+        <div class="two">
+          <div class="field">
+            <label for="t-price">Цена продажи, ₽</label>
+            <input class="inp" id="t-price" inputmode="numeric" value="7 200 000">
+          </div>
+          <div class="field">
+            <label for="t-cad">Кадастровая стоимость, ₽</label>
+            <input class="inp" id="t-cad" inputmode="numeric" value="6 800 000">
+          </div>
+        </div>
+        <span class="hint" style="margin-top:-8px">Кадастровая — на 1 января года продажи, есть в выписке ЕГРН. Если цена ниже 70% кадастровой, налог считают от 70% кадастровой.</span>
+        <div class="field">
+          <label for="t-cost">Расходы на покупку по документам, ₽</label>
+          <input class="inp" id="t-cost" inputmode="numeric" value="6 500 000">
+          <span class="hint">Цена по договору покупки, включая ипотеку и маткапитал. Оставьте 0, если документов нет — тогда только вычет 1 млн ₽.</span>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="t-buy">Дата покупки</label>
+            <input class="inp" id="t-buy" type="date" value="2022-06-15">
+          </div>
+          <div class="field">
+            <label for="t-sell">Дата продажи</label>
+            <input class="inp" id="t-sell" type="date">
+          </div>
+        </div>
+        <span class="hint" style="margin-top:-8px">Дата регистрации права в ЕГРН. Для новостройки — дата регистрации права собственности, если не было полной оплаты по ДДУ раньше.</span>
+        <button type="button" class="link-btn" id="t-take">Взять цену и доли из других вкладок</button>
+      </div>
+
+      <div class="card form-card">
+        <h3 class="sec-title">Собственники</h3>
+        <div class="owners" id="owners"></div>
+        <button type="button" class="add-btn" id="add-owner">+ Добавить собственника</button>
+        <span class="hint" id="owners-hint">Доли пишите дробью, как в выписке ЕГРН. Налог считается для каждого отдельно, за детей его платят родители.</span>
+      </div>
+
+      <div class="card form-card">
+        <h3 class="sec-title">Льготы</h3>
+        <label class="check"><input type="checkbox" id="t-3y"><span>Минимальный срок 3 года, а не 5<small>Наследство, подарок от близкого родственника, приватизация, рента или единственное жильё на дату продажи.</small></span></label>
+        <label class="check"><input type="checkbox" id="t-family"><span>Семья с двумя и более детьми покупает жильё взамен<small>Дети до 18 лет или до 24 при очной учёбе. Новое жильё куплено в том же году или до 30 апреля следующего и больше по площади или по кадастровой стоимости. Кадастровая стоимость проданного не больше 50 млн ₽. Есть и другие условия — уточните в ФНС.</small></span></label>
+        <label class="check"><input type="checkbox" id="t-msk" checked><span>Срок владения долями детей считать с даты покупки<small>Для долей, выделенных детям по обязательству с маткапиталом. Иначе укажите дату выделения долей.</small></span></label>
+        <div class="field" id="t-kid-date-field" hidden>
+          <label for="t-kid-date">Дата регистрации долей детей</label>
+          <input class="inp" id="t-kid-date" type="date" value="2024-09-01">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Налог: результат ===== -->
+    <div class="col" data-mode="tax" hidden aria-live="polite">
+      <section class="card summary" id="t-summary">
+        <div><div class="k" id="t-k">Налог со всех собственников</div><div class="v" id="t-v">—</div></div>
+        <div class="hint" id="t-sub"></div>
+      </section>
+
+      <section class="card">
+        <h2>Налог по каждому собственнику</h2>
+        <div class="tbl-box">
+          <table>
+            <thead><tr><th>Собственник</th><th>Доход</th><th>Вычет</th><th>База</th><th>Налог</th></tr></thead>
+            <tbody id="t-rows"></tbody>
+            <tfoot id="t-foot"></tfoot>
+          </table>
+        </div>
+        <p class="note" id="t-note"></p>
+      </section>
+
+      <section class="card deadline" id="t-deadline"></section>
+
+      <section class="card cta">
+        <h2>Хотите продать без лишнего налога?</h2>
+        <p>Подскажу, когда выгоднее выходить на сделку, какие льготы подходят вашей семье, и проведу продажу от начала до конца.</p>
+        <div class="cta-row">
+          <span class="handle">@Wera80</span>
+          <a class="btn-link" href="https://t.me/Wera80" target="_blank" rel="noopener">Написать в Telegram</a>
+          <button type="button" class="btn-ghost copy" data-copy="@Wera80">Скопировать ник</button>
+          <span class="copied" hidden></span>
+        </div>
+        <div class="cta-row">
+          <span class="handle">+7 983 212-69-54</span>
+          <a class="btn-link" href="tel:+79832126954">Позвонить</a>
+          <a class="btn-ghost" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+          <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
+          <span class="copied" hidden></span>
+        </div>
+        <p class="hint" style="margin:0">К этому номеру привязаны все мессенджеры: WhatsApp, Telegram, MAX — пишите, где вам удобно.</p>
+      </section>
+    </div>
+  </form>
+
+  <section class="card">
+    <h2>Что важно знать</h2>
+    <ul class="facts">
+      <li><b>Доли выделяют обязательно.</b> Жильё, купленное с маткапиталом, оформляют в общую собственность родителей и детей. Если жильё в ипотеке, доли выделяют в течение 6 месяцев после снятия обременения.</li>
+      <li><b>Доли считают от маткапитала, а не от всей цены.</b> Дети получают долю, равную их части маткапитала. Остальное принадлежит тем, кто платил: собственные деньги и ипотека.</li>
+      <li><b>Деньги в браке — общие.</b> Остальная часть делится между супругами поровну, если нет брачного договора. Добрачные деньги или подарок одному из супругов меняют расчёт, это нужно подтверждать документами.</li>
+      <li><b>Продажа жилья с долями детей</b> требует предварительного согласия органов опеки. Обычно опека требует, чтобы дети получили в новом жилье долю не меньше прежней и по площади, и по стоимости.</li>
+      <li>Иногда опека разрешает вместо доли положить деньги на счёт ребёнка. Это решение принимает местная опека, условия в регионах различаются.</li>
+      <li><b>Налог с продажи</b> не платят, если жильём владели дольше минимального срока: 5 лет по общему правилу, 3 года в особых случаях. Иначе платят 13% с базы до 2,4 млн ₽ и 15% с превышения. Если жильё продают целиком по одному договору, вычет 1 млн ₽ делится между собственниками по долям.</li>
+      <li>Сделки с долями, как правило, удостоверяет нотариус. Форму соглашения о долях и список документов уточните у нотариуса или в МФЦ.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Что говорят клиенты</h2>
+    <div class="reviews">
+      <blockquote class="review"><p>«Умение просто и доходчиво объяснить сложные тонкости нашего законодательства. Было много волнений, но вы грамотно и быстро всё организовали. Сделка прошла без всякого волнения».</p><cite>Анастасия</cite></blockquote>
+      <blockquote class="review"><p>«С Верой Васильевной я работала два раза. Она помогла мне купить квартиру, а потом продать дом. Прошли все бюрократические препятствия».</p><cite>Елена Аркадьевна</cite></blockquote>
+      <blockquote class="review"><p>«Вера Васильевна полностью взяла на себя все организационные моменты: сбор всех документов, консультации, подсказывала и была с нами всегда на связи».</p><cite>Светлана</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="card cta">
+    <h2>Посчитали? Давайте проверим ваш случай</h2>
+    <p>Доли с маткапиталом — это то, где чаще всего ошибаются. Напишите мне, разберём вашу ситуацию бесплатно, а новостройку подберу без комиссии.</p>
+    <div class="cta-row">
+      <span class="handle">@Wera80</span>
+      <a class="btn-link" href="https://t.me/Wera80" target="_blank" rel="noopener">Написать в Telegram</a>
+      <button type="button" class="btn-ghost copy" data-copy="@Wera80">Скопировать ник</button>
+      <span class="copied" hidden></span>
+    </div>
+    <div class="cta-row">
+      <span class="handle">+7 983 212-69-54</span>
+      <a class="btn-link" href="tel:+79832126954">Позвонить</a>
+      <a class="btn-ghost" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+      <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
+      <span class="copied" hidden></span>
+    </div>
+    <p class="hint" style="margin:0">К этому номеру привязаны все мессенджеры: WhatsApp, Telegram, MAX — пишите, где вам удобно.</p>
+  </section>
+
+  <p class="foot">Справочный расчёт по общепринятой методике определения долей при использовании материнского капитала. Окончательный размер долей определяют соглашение членов семьи, нотариус, орган опеки или суд.</p>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+  const fmt = (v) => Math.round(v).toLocaleString('ru-RU');
+  const rub = (v) => fmt(v) + ' ₽';
+  const m2 = (v) => (Math.round(v * 100) / 100).toLocaleString('ru-RU') + ' м²';
+  const pct = (v) => (Math.round(v * 10000) / 100).toLocaleString('ru-RU') + '%';
+  const parse = (s) => { const n = parseFloat(String(s).replace(/[\s ]/g, '').replace(',', '.')); return isFinite(n) ? n : NaN; };
+  const radio = (name) => document.querySelector('input[name=' + name + ']:checked').value;
+  const plural = (n, a, b, c) => { const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c); };
+  const gcd = (a, b) => { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b]; } return a; };
+  const frac = (n, d) => { if (n === 0) return '0'; const g = gcd(n, d) || 1; return (n / g).toLocaleString('ru-RU').replace(/\s/g, '') + '/' + (d / g).toLocaleString('ru-RU').replace(/\s/g, ''); };
+  const COLORS = ['var(--c1)', 'var(--c2)', 'var(--c3)', 'var(--c4)', 'var(--c5)', 'var(--c6)', 'var(--c7)', 'var(--c8)'];
+  function parseShare(s) {
+    s = String(s).trim().replace(',', '.');
+    let m = s.match(/^(\d+)\s*\/\s*(\d+)$/);
+    if (m && +m[2] > 0) return +m[1] / +m[2];
+    if (/%$/.test(s)) { const p = parseFloat(s); return isFinite(p) ? p / 100 : NaN; }
+    const v = parseFloat(s); return isFinite(v) ? (v > 1 ? v / 100 : v) : NaN;
+  }
+
+  let buy = null, sell = null;
+
+  // ===== Purchase =====
+  function calcBuy() {
+    const holder = radio('holder'), married = radio('married') === '1', kids = +radio('kids');
+    const price = Math.round(parse($('price').value) || 0), msk = Math.round(parse($('msk').value) || 0);
+    const area = parse($('area').value), den = radio('den'), rest = married ? 'half' : $('rest').value;
+    const holderName = holder === 'm' ? 'Мама' : 'Папа', otherName = holder === 'm' ? 'Папа' : 'Мама';
+    const N = 1 + (married ? 1 : 0) + kids;
+    const err = price <= 0 ? 'Укажите стоимость жилья.' : msk <= 0 ? 'Укажите сумму маткапитала.' : msk > price ? 'Маткапитал не может быть больше стоимости жилья.' : '';
+    if (err) return { err };
+
+    const hasOther = married || rest !== 'holder';
+    // Exact shares over a common denominator 2·price·N
+    const D = 2 * price * N, c = 2 * msk, remN = D - N * c;
+    let hN, oN;
+    if (rest === 'half') { hN = c + remN / 2; oN = (married ? c : 0) + remN / 2; }
+    else if (rest === 'other') { hN = c; oN = remN; }
+    else { hN = c + remN; oN = 0; }
+
+    const members = [{ name: holderName + ' (владелец сертификата)', exact: [hN, D], kind: 'p' }];
+    if (hasOther) members.push({ name: otherName + (married ? ' (супруг' + (holder === 'm' ? '' : 'а') + ')' : ''), exact: [oN, D], kind: 'p' });
+    for (let i = 1; i <= kids; i++) members.push({ name: 'Ребёнок ' + i, exact: [c, D], kind: 'c' });
+
+    // Rounded: children up, parents split the rest the same way the exact shares do
+    if (den !== 'exact') {
+      const R = +den, ch = Math.ceil(c / D * R - 1e-9);
+      const left = R - ch * kids;
+      let h, o;
+      if (rest === 'half') {
+        if (married) { h = Math.ceil(left / 2); o = left - h; }
+        else { const hm = Math.ceil(c / D * R - 1e-9); const r2 = left - hm; h = hm + Math.ceil(r2 / 2); o = r2 - Math.ceil(r2 / 2); }
+      } else if (rest === 'other') { h = Math.ceil(c / D * R - 1e-9); o = left - h; }
+      else { h = left; o = 0; }
+      members.forEach(mb => { mb.num = mb.kind === 'c' ? ch : (mb === members[0] ? h : o); mb.den = R; });
+    } else members.forEach(mb => { const g = gcd(mb.exact[0], mb.exact[1]) || 1; mb.num = mb.exact[0] / g; mb.den = mb.exact[1] / g; });
+
+    members.forEach(mb => { mb.f = mb.num / mb.den; mb.rub = mb.f * price; mb.m2 = isFinite(area) ? mb.f * area : NaN; mb.exactStr = frac(mb.exact[0], mb.exact[1]); });
+    const child = members.find(mb => mb.kind === 'c');
+    return { holder, married, kids, price, msk, area, den, rest, N, members, child, perMember: msk / N };
+  }
+
+  function renderBuy() {
+    $('rest-field').hidden = radio('married') === '1';
+    buy = calcBuy();
+    const sum = $('b-summary');
+    if (buy.err) {
+      sum.className = 'card summary alert'; $('b-k').textContent = 'Проверьте данные'; $('b-v').textContent = buy.err;
+      $('b-stack').innerHTML = ''; $('b-legend').innerHTML = ''; $('b-rows').innerHTML = ''; $('b-foot').innerHTML = ''; $('b-note').textContent = ''; $('b-formula').textContent = '—';
+      return;
+    }
+    const b = buy;
+    sum.className = 'card summary';
+    $('b-k').textContent = b.kids > 1 ? 'Доля каждого ребёнка' : 'Доля ребёнка';
+    $('b-v').innerHTML = b.child.num + '/' + b.child.den + '<small>' + pct(b.child.f) + (isFinite(b.area) ? ' · ' + m2(b.child.m2) : '') + '</small>';
+    $('b-stack').innerHTML = b.members.map((mb, i) => '<i title="' + mb.name + ': ' + mb.num + '/' + mb.den + '" style="flex:' + mb.f + ';background:' + COLORS[i % 8] + '"></i>').join('');
+    $('b-legend').innerHTML = b.members.map((mb, i) => '<span><i class="dot" style="background:' + COLORS[i % 8] + '"></i>' + mb.name.replace(/ \(.*\)/, '') + ' ' + mb.num + '/' + mb.den + '</span>').join('');
+    $('b-rows').innerHTML = b.members.map(mb => '<tr><td>' + mb.name + '</td><td class="frac">' + mb.num + '/' + mb.den + (b.den !== 'exact' ? '<span class="sub">точно ' + mb.exactStr + '</span>' : '') + '</td><td>' + pct(mb.f) + '</td><td>' + rub(mb.rub) + '</td><td>' + (isFinite(mb.m2) ? m2(mb.m2) : '—') + '</td></tr>').join('');
+    const tot = b.members.reduce((t, mb) => t + mb.f, 0);
+    $('b-foot').innerHTML = '<tr><td>Итого</td><td>' + (Math.abs(tot - 1) < 1e-9 ? '1' : pct(tot)) + '</td><td>100%</td><td>' + rub(b.price) + '</td><td>' + (isFinite(b.area) ? m2(b.area) : '—') + '</td></tr>';
+    $('b-note').textContent = 'На каждого члена семьи приходится ' + rub(b.perMember) + ' маткапитала. ' +
+      (b.married ? 'Остальные ' + rub(b.price - b.msk) + ' — общие деньги супругов, они делятся поровну.' :
+        b.rest === 'other' ? 'Остальные ' + rub(b.price - b.msk) + ' оплачивает второй родитель, ему достаётся эта часть.' :
+        b.rest === 'half' ? 'Остальные ' + rub(b.price - b.msk) + ' родители оплачивают поровну.' : 'Остальные ' + rub(b.price - b.msk) + ' оплачивает владелец сертификата.');
+    $('b-formula').textContent = 'Доля ребёнка = ' + fmt(b.msk) + ' ÷ ' + fmt(b.price) + ' ÷ ' + b.N + ' = ' + b.child.exactStr + ' ≈ ' + pct(b.msk / b.price / b.N) + (b.den !== 'exact' ? ' → округляем вверх до ' + b.child.num + '/' + b.child.den : '');
+  }
+
+  // ===== Sale =====
+  function calcSell() {
+    const sp = parse($('s-price').value) || 0, sa = parse($('s-area').value);
+    const share = parseShare($('s-share').value), kids = Math.max(1, Math.round(parse($('s-kids').value) || 1));
+    const np = parse($('n-price').value) || 0, na = parse($('n-area').value), R = +radio('nden');
+    if (!(sp > 0 && np > 0)) return { err: 'Укажите цены продаваемого и нового жилья.' };
+    if (!(share > 0 && share < 1)) return { err: 'Укажите долю ребёнка дробью, например 8/100.' };
+    if (share * kids >= 1) return { err: 'Сумма долей детей не может быть больше всего жилья.' };
+    const oldRub = share * sp, oldM2 = isFinite(sa) ? share * sa : NaN;
+    const byRub = oldRub / np, byM2 = isFinite(oldM2) && na > 0 ? oldM2 / na : 0;
+    const need = Math.max(byRub, byM2);
+    const num = Math.ceil(need * R - 1e-9);
+    const f = num / R;
+    const parents = R - num * kids;
+    return { sp, sa, share, kids, np, na, R, oldRub, oldM2, byRub, byM2, need, num, f, parents, newRub: f * np, newM2: na > 0 ? f * na : NaN,
+      limiting: byM2 > byRub ? 'area' : 'value', tooMuch: parents < 0 };
+  }
+
+  function renderSell() {
+    sell = calcSell();
+    const sum = $('s-summary');
+    if (sell.err || sell.tooMuch) {
+      sum.className = 'card summary alert';
+      $('s-v').textContent = sell.err || 'Новое жильё слишком маленькое или дешёвое: на доли детей уходит всё жильё.';
+      $('s-stack').innerHTML = ''; $('s-legend').innerHTML = ''; $('s-rows').innerHTML = ''; $('s-box').innerHTML = '';
+      return;
+    }
+    const s = sell;
+    sum.className = 'card summary';
+    $('s-v').innerHTML = s.num + '/' + s.R + '<small>' + pct(s.f) + (isFinite(s.newM2) ? ' · ' + m2(s.newM2) : '') + ' · ' + rub(s.newRub) + '</small>';
+    const parts = [{ name: 'Родители', f: s.parents / s.R }].concat(Array.from({ length: s.kids }, (_, i) => ({ name: 'Ребёнок ' + (i + 1), f: s.f })));
+    $('s-stack').innerHTML = parts.map((p, i) => '<i style="flex:' + p.f + ';background:' + COLORS[i % 8] + '"></i>').join('');
+    $('s-legend').innerHTML = parts.map((p, i) => '<span><i class="dot" style="background:' + COLORS[i % 8] + '"></i>' + p.name + ' ' + (i === 0 ? s.parents : s.num) + '/' + s.R + '</span>').join('');
+    $('s-rows').innerHTML =
+      '<tr><td>Было в продаваемом жилье</td><td class="frac">' + $('s-share').value.trim() + '</td><td>' + rub(s.oldRub) + '</td><td>' + (isFinite(s.oldM2) ? m2(s.oldM2) : '—') + '</td></tr>' +
+      '<tr><td>Нужно не меньше по стоимости</td><td>' + pct(s.byRub) + '</td><td>' + rub(s.oldRub) + '</td><td>' + (isFinite(s.na) && s.na > 0 ? m2(s.byRub * s.na) : '—') + '</td></tr>' +
+      '<tr><td>Нужно не меньше по площади</td><td>' + (s.byM2 ? pct(s.byM2) : '—') + '</td><td>' + (s.byM2 ? rub(s.byM2 * s.np) : '—') + '</td><td>' + (isFinite(s.oldM2) ? m2(s.oldM2) : '—') + '</td></tr>' +
+      '<tr><td><b>Выделить в новом жилье</b></td><td class="frac">' + s.num + '/' + s.R + '</td><td><b>' + rub(s.newRub) + '</b></td><td><b>' + (isFinite(s.newM2) ? m2(s.newM2) : '—') + '</b></td></tr>';
+    $('s-box').className = 'box';
+    $('s-box').innerHTML = 'Решающим оказалось условие <b>' + (s.limiting === 'area' ? 'по площади' : 'по стоимости') + '</b>: ' +
+      (s.limiting === 'area' ? 'новое жильё дешевле за метр, поэтому долю считаем от площади.' : 'новое жильё дороже за метр, поэтому долю считаем от стоимости.') +
+      ' Детям вместе — ' + (s.num * s.kids) + '/' + s.R + ', родителям — ' + s.parents + '/' + s.R + '. Расчёт показывает минимум: опека может попросить больше.';
+  }
+
+  // ===== Tax =====
+  const DEDUCTION = 1000000, LOW_RATE = 0.13, HIGH_RATE = 0.15, THRESHOLD = 2400000, CAD_FLOOR = 0.7;
+  let owners = [];
+  let tax = null;
+  function ownersFromBuy() {
+    if (buy && !buy.err) owners = buy.members.map(mb => ({ name: mb.name.replace(/ \(.*\)/, ''), share: mb.num + '/' + mb.den, kid: mb.kind === 'c' }));
+    else owners = [{ name: 'Собственник', share: '1/1', kid: false }];
+  }
+  function renderOwners() {
+    $('owners').innerHTML = owners.map((o, i) =>
+      '<div class="owner"><input class="inp" id="ow-name-' + i + '" data-oi="' + i + '" data-of="name" value="' + o.name.replace(/"/g, '&quot;') + '" aria-label="Собственник ' + (i + 1) + '">' +
+      '<input class="inp sh" id="ow-share-' + i + '" data-oi="' + i + '" data-of="share" value="' + o.share + '" aria-label="Доля, собственник ' + (i + 1) + '">' +
+      '<button type="button" class="icon-btn" data-odel="' + i + '" aria-label="Удалить собственника ' + (i + 1) + '"' + (owners.length === 1 ? ' disabled' : '') + '>×</button></div>').join('');
+  }
+  const addYears = (d, y) => { const x = new Date(d); x.setFullYear(x.getFullYear() + y); return x; };
+  const yearsBetween = (a, b) => { let y = b.getFullYear() - a.getFullYear(); if (addYears(a, y) > b) y--; return Math.max(0, y); };
+  const dstr = (d) => d.toLocaleDateString('ru-RU');
+  function ndfl(base) { return base <= THRESHOLD ? base * LOW_RATE : THRESHOLD * LOW_RATE + (base - THRESHOLD) * HIGH_RATE; }
+
+  function calcTax() {
+    const price = parse($('t-price').value) || 0, cad = parse($('t-cad').value) || 0, cost = parse($('t-cost').value) || 0;
+    const buyD = new Date($('t-buy').value), sellD = new Date($('t-sell').value);
+    const min = $('t-3y').checked ? 3 : 5, family = $('t-family').checked, mskRule = $('t-msk').checked;
+    const kidD = mskRule ? buyD : new Date($('t-kid-date').value);
+    if (!(price > 0)) return { err: 'Укажите цену продажи.' };
+    if (isNaN(buyD) || isNaN(sellD)) return { err: 'Укажите даты покупки и продажи.' };
+    if (sellD < buyD) return { err: 'Дата продажи раньше даты покупки.' };
+    const list = owners.map(o => ({ name: o.name || 'Собственник', f: parseShare(o.share), kid: o.kid, shareStr: o.share }));
+    if (list.some(o => !(o.f > 0 && o.f <= 1))) return { err: 'Проверьте доли собственников: пишите дробью, например 46/100.' };
+    const sum = list.reduce((t, o) => t + o.f, 0);
+    const income0 = Math.max(price, cad * CAD_FLOOR);
+    const rows = list.map(o => {
+      const from = o.kid && !isNaN(kidD) ? kidD : buyD;
+      const held = yearsBetween(from, sellD), freeDate = addYears(from, min);
+      const r = { ...o, from, held, freeDate };
+      if (family) return Object.assign(r, { free: 'семейная льгота', tax: 0 });
+      if (sellD >= freeDate) return Object.assign(r, { free: 'владели ' + held + ' ' + plural(held, 'год', 'года', 'лет') + ' — не меньше ' + min, tax: 0 });
+      const income = income0 * o.f, dFix = DEDUCTION * o.f, dCost = cost * o.f;
+      const useCost = dCost > dFix;
+      const ded = Math.min(income, useCost ? dCost : dFix), base = Math.max(0, income - ded);
+      return Object.assign(r, { income, ded, dedKind: useCost ? 'расходы' : '1 млн по доле', base, tax: Math.round(ndfl(base)) });
+    });
+    const total = rows.reduce((t, r) => t + r.tax, 0);
+    return { price, cad, cost, buyD, sellD, min, family, mskRule, rows, total, sum, cadUsed: cad * CAD_FLOOR > price, freeDate: addYears(buyD, min) };
+  }
+
+  function renderTax() {
+    $('t-kid-date-field').hidden = $('t-msk').checked;
+    tax = calcTax();
+    const sum = $('t-summary');
+    if (tax.err) {
+      sum.className = 'card summary alert'; $('t-k').textContent = 'Проверьте данные'; $('t-v').textContent = tax.err; $('t-sub').textContent = '';
+      $('t-rows').innerHTML = ''; $('t-foot').innerHTML = ''; $('t-note').textContent = ''; $('t-deadline').innerHTML = '';
+      return;
+    }
+    const t = tax;
+    const shareWarn = Math.abs(t.sum - 1) > 0.0005;
+    $('owners-hint').textContent = shareWarn ? 'Доли в сумме дают ' + pct(t.sum) + ', а должны 100%. Проверьте доли.' : 'Доли пишите дробью, как в выписке ЕГРН. Налог считается для каждого отдельно, за детей его платят родители.';
+    $('owners-hint').classList.toggle('warn', shareWarn);
+    if (t.total === 0) {
+      sum.className = 'card summary free'; $('t-k').textContent = 'Налог со всех собственников';
+      $('t-v').innerHTML = 'Налога нет';
+      $('t-sub').textContent = t.family ? 'Семьи с двумя и более детьми не платят налог при продаже жилья, если выполнены условия льготы.' : 'Срок владения не меньше минимального — доход от продажи не облагается.';
+    } else {
+      sum.className = 'card summary pay'; $('t-k').textContent = 'Налог со всех собственников';
+      $('t-v').innerHTML = rub(t.total);
+      const later = t.rows.filter(r => r.tax > 0).map(r => r.freeDate).sort((a, b) => b - a)[0];
+      $('t-sub').innerHTML = 'Без налога можно продать с <b>' + dstr(later) + '</b>.' + (t.cadUsed ? ' Цена ниже 70% кадастровой, поэтому доход считаем от ' + rub(t.cad * CAD_FLOOR) + '.' : '');
+    }
+    $('t-rows').innerHTML = t.rows.map(r => r.tax === 0 && r.income === undefined
+      ? '<tr><td>' + r.name + '<span class="sub" style="display:block;font-size:12px;color:var(--muted)">доля ' + r.shareStr + '</span></td><td colspan="3" class="ok" style="text-align:left">' + r.free + '</td><td class="ok">0 ₽</td></tr>'
+      : '<tr><td>' + r.name + '<span class="sub" style="display:block;font-size:12px;color:var(--muted)">доля ' + r.shareStr + ', владели ' + r.held + ' ' + plural(r.held, 'год', 'года', 'лет') + '</span></td><td>' + rub(r.income) + '</td><td>' + rub(r.ded) + '<span class="sub" style="display:block;font-size:12px;color:var(--muted)">' + r.dedKind + '</span></td><td>' + rub(r.base) + '</td><td class="' + (r.tax ? 'due' : 'ok') + '">' + rub(r.tax) + '</td></tr>').join('');
+    $('t-foot').innerHTML = '<tr><td>Итого</td><td></td><td></td><td></td><td>' + rub(t.total) + '</td></tr>';
+    $('t-note').textContent = t.total > 0
+      ? 'Для каждого собственника выбран выгодный вычет: 1 млн ₽ по доле или расходы на покупку по доле. Ставка 13% с базы до 2,4 млн ₽ и 15% с превышения.'
+      : 'Минимальный срок владения — ' + t.min + ' ' + plural(t.min, 'год', 'года', 'лет') + '.';
+    const y = t.sellD.getFullYear() + 1;
+    $('t-deadline').innerHTML = t.total > 0
+      ? '<h2 style="margin:0">Когда отчитаться и заплатить</h2><span>Декларацию 3-НДФЛ подать до <b>30 апреля ' + y + '</b>, налог заплатить до <b>15 июля ' + y + '</b>. За несовершеннолетних детей декларацию подают родители.</span>'
+      : '<h2 style="margin:0">Декларация</h2><span>Если налога нет из-за срока владения или семейной льготы, декларацию 3-НДФЛ подавать не нужно.</span>';
+  }
+
+  function render() {
+    const mode = radio('mode');
+    $$('[data-mode]').forEach(el => { el.hidden = el.dataset.mode !== mode; });
+    renderBuy(); renderSell(); renderTax();
+  }
+
+  // ===== Excel export =====
+  const RUBF = '#,##0" ₽"';
+  async function buildWorkbook() {
+    const wb = new ExcelJS.Workbook();
+    const head = { font: { bold: true, color: { argb: 'FFFFFFFF' } }, fill: { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF2F5BB7' } } };
+    const sheet = (name, widths) => { const ws = wb.addWorksheet(name); ws.columns = widths.map(w => ({ width: w })); return ws; };
+    const hdr = (ws, cells) => { const r = ws.addRow(cells); r.eachCell(c => Object.assign(c, head)); return r; };
+
+    const ws = sheet('Покупка', [36, 14, 18, 12, 16, 12]);
+    ws.addRow(['Доли при покупке жилья с маткапиталом']).font = { bold: true, size: 15 };
+    ws.addRow(['Дата расчёта', new Date().toLocaleDateString('ru-RU')]);
+    ws.addRow([]);
+    if (buy && !buy.err) {
+      const b = buy;
+      [['Стоимость жилья', b.price, RUBF], ['Маткапитал', b.msk, RUBF], ['Площадь, м²', isFinite(b.area) ? b.area : '—'], ['Членов семьи с правом на маткапитал', b.N],
+        ['Маткапитал на одного члена семьи', b.perMember, RUBF], ['Брак', b.married ? 'да' : 'нет']].forEach(([k, v, f]) => { const r = ws.addRow([k, v]); if (f) r.getCell(2).numFmt = f; });
+      ws.addRow([]);
+      hdr(ws, ['Кто', 'Доля', 'Точная доля', 'Процент', 'В рублях', 'В м²']);
+      b.members.forEach(mb => {
+        const r = ws.addRow([mb.name, mb.num + '/' + mb.den, mb.exactStr, mb.f, mb.rub, isFinite(mb.m2) ? Math.round(mb.m2 * 100) / 100 : '—']);
+        r.getCell(4).numFmt = '0.00%'; r.getCell(5).numFmt = RUBF;
+      });
+      ws.addRow([]);
+      ws.addRow(['Формула: доля ребёнка = маткапитал ÷ стоимость ÷ число членов семьи. Доли детей округлены вверх.']).font = { italic: true, color: { argb: 'FF666666' } };
+    } else ws.addRow(['Расчёт покупки не заполнен']);
+
+    const ws2 = sheet('Продажа', [40, 18, 18, 14]);
+    ws2.addRow(['Доли детей при продаже и покупке нового жилья']).font = { bold: true, size: 15 };
+    ws2.addRow([]);
+    if (sell && !sell.err && !sell.tooMuch) {
+      const s = sell;
+      [['Цена продаваемого жилья', s.sp, RUBF], ['Площадь продаваемого, м²', isFinite(s.sa) ? s.sa : '—'], ['Доля каждого ребёнка', $('s-share').value.trim()], ['Детей с долями', s.kids],
+        ['Цена нового жилья', s.np, RUBF], ['Площадь нового, м²', isFinite(s.na) ? s.na : '—']].forEach(([k, v, f]) => { const r = ws2.addRow([k, v]); if (f) r.getCell(2).numFmt = f; });
+      ws2.addRow([]);
+      hdr(ws2, ['', 'Доля', 'В рублях', 'В м²']);
+      const rows = [['Было у ребёнка', $('s-share').value.trim(), s.oldRub, s.oldM2], ['Нужно по стоимости', s.byRub, s.oldRub, s.na > 0 ? s.byRub * s.na : '—'],
+        ['Нужно по площади', s.byM2 || '—', s.byM2 ? s.byM2 * s.np : '—', s.oldM2], ['Выделить каждому ребёнку', s.num + '/' + s.R, s.newRub, s.newM2], ['Родителям', s.parents + '/' + s.R, (s.parents / s.R) * s.np, s.na > 0 ? s.parents / s.R * s.na : '—']];
+      rows.forEach(rw => {
+        const r = ws2.addRow(rw.map(v => typeof v === 'number' && !isFinite(v) ? '—' : v));
+        if (typeof rw[1] === 'number') r.getCell(2).numFmt = '0.00%';
+        r.getCell(3).numFmt = RUBF; r.getCell(4).numFmt = '0.00';
+      });
+      ws2.getRow(ws2.rowCount - 1).font = { bold: true };
+    } else ws2.addRow(['Расчёт продажи не заполнен']);
+
+    const ws3 = sheet('Налог', [30, 12, 18, 18, 18, 16, 30]);
+    ws3.addRow(['Налог с продажи жилья (НДФЛ)']).font = { bold: true, size: 15 };
+    ws3.addRow([]);
+    if (tax && !tax.err) {
+      const t = tax;
+      [['Цена продажи', t.price, RUBF], ['Кадастровая стоимость', t.cad, RUBF], ['Расходы на покупку', t.cost, RUBF], ['Дата покупки', dstr(t.buyD)], ['Дата продажи', dstr(t.sellD)],
+        ['Минимальный срок владения, лет', t.min], ['Семейная льгота', t.family ? 'да' : 'нет']].forEach(([k, v, f]) => { const r = ws3.addRow([k, v]); if (f) r.getCell(2).numFmt = f; });
+      ws3.addRow([]);
+      hdr(ws3, ['Собственник', 'Доля', 'Доход', 'Вычет', 'База', 'Налог', 'Пояснение']);
+      t.rows.forEach(r => {
+        const row = ws3.addRow([r.name, r.shareStr, r.income ?? 0, r.ded ?? 0, r.base ?? 0, r.tax, r.free || ('вычет: ' + r.dedKind)]);
+        [3, 4, 5, 6].forEach(i => { row.getCell(i).numFmt = RUBF; });
+      });
+      const tr = ws3.addRow(['Итого', '', '', '', '', t.total, '']); tr.font = { bold: true }; tr.getCell(6).numFmt = RUBF;
+      ws3.addRow([]);
+      ws3.addRow([t.total > 0 ? 'Декларация 3-НДФЛ до 30 апреля ' + (t.sellD.getFullYear() + 1) + ', уплата до 15 июля ' + (t.sellD.getFullYear() + 1) + '.' : 'Налога нет, декларацию подавать не нужно.']).font = { italic: true };
+    } else ws3.addRow(['Расчёт налога не заполнен']);
+    return wb.xlsx.writeBuffer();
+  }
+  // Copy the contact handle; fall back to selecting it when the clipboard is refused
+  $$('.copy').forEach(b => b.addEventListener('click', () => {
+    const note = b.parentNode.querySelector('.copied');
+    const done = (t) => { note.textContent = t; note.hidden = false; setTimeout(() => { note.hidden = true; }, 2500); };
+    const pick = () => { const h = b.parentNode.querySelector('.handle'); const r = document.createRange(); r.selectNodeContents(h); const s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Выделено — нажмите «Копировать»'); };
+    try { navigator.clipboard.writeText(b.dataset.copy).then(() => done('Скопировано'), pick); } catch (e) { pick(); }
+  }));
+
+  // ===== Wiring =====
+  $('s-take').addEventListener('click', () => {
+    if (!buy || buy.err) return;
+    $('s-share').value = buy.child.num + '/' + buy.child.den;
+    $('s-kids').value = buy.kids;
+    if (isFinite(buy.area)) $('s-area').value = String(buy.area).replace('.', ',');
+    renderSell();
+  });
+  $('owners').addEventListener('input', (e) => { const i = e.target.dataset.oi; if (i !== undefined) { owners[+i][e.target.dataset.of] = e.target.value; renderTax(); } });
+  $('owners').addEventListener('click', (e) => { const d = e.target.dataset.odel; if (d !== undefined && owners.length > 1) { owners.splice(+d, 1); renderOwners(); renderTax(); } });
+  $('add-owner').addEventListener('click', () => { if (owners.length >= 10) return; owners.push({ name: 'Собственник ' + (owners.length + 1), share: '', kid: false }); renderOwners(); $('ow-name-' + (owners.length - 1)).focus(); });
+  $('t-take').addEventListener('click', () => {
+    const sp = parse($('s-price').value); if (isFinite(sp)) $('t-price').value = fmt(sp);
+    if (buy && !buy.err) $('t-cost').value = fmt(buy.price);
+    ownersFromBuy(); renderOwners(); renderTax();
+  });
+  $('t-sell').value = new Date().toISOString().slice(0, 10);
+  ['price', 'msk', 's-price', 'n-price', 't-price', 't-cad', 't-cost'].forEach(id => $(id).addEventListener('blur', () => { const v = parse($(id).value); if (isFinite(v)) $(id).value = fmt(v); }));
+  $('form').addEventListener('input', render);
+  $('form').addEventListener('change', render);
+  $$('input[name=mode]').forEach(el => el.addEventListener('change', render));
+  $('form').addEventListener('submit', (e) => e.preventDefault());
+  renderBuy(); ownersFromBuy(); renderOwners();
+  render();
+})();
+</script>
+</body>
+</html>
