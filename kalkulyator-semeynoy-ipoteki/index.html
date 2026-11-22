@@ -20,6 +20,10 @@
 (function(){var K="cookie-choice",ID=114500149;
 function load(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r)return;}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id="+ID,"ym");
 ym(ID,"init",{webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});}
+function goal(g){if(typeof window.ym==="function"){ym(ID,"reachGoal",g);ym(ID,"reachGoal","kontakt");}}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=(a.getAttribute("href")||"").toLowerCase();
+if(h.indexOf("wa.me/")>-1||h.indexOf("whatsapp")>-1)goal("whatsapp");else if(h.indexOf("t.me/wera80")>-1)goal("telegram");else if(h.indexOf("max.ru/")>-1)goal("max");else if(h.indexOf("tel:")===0)goal("zvonok");},true);
+document.addEventListener("submit",function(e){var r=document.getElementById("f-result");if(e.target&&e.target.id==="lead"&&r&&!r.hidden&&typeof window.ym==="function")ym(ID,"reachGoal","zayavka");});
 var c=null;try{c=localStorage.getItem(K)}catch(e){}
 if(c==="yes"){load();return}if(c==="no")return;
 function show(){var b=document.createElement("div");b.setAttribute("role","dialog");b.setAttribute("aria-label","Cookie");
