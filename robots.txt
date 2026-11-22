@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://v20440882-afk.github.io/vera-site/sitemap.xml
+Sitemap: https://vera-nvkz.ru/sitemap.xml
