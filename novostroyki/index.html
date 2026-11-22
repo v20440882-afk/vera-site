@@ -685,7 +685,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
       <div class="stack" style="gap:22px">
         <span class="eyebrow">Обо мне</span>
         <h1 class="sm">Вера Устьянцева, специалист по недвижимости</h1>
-        <p class="lead">Новокузнецк. Работаю в агентстве недвижимости «Города». Новостройки, покупка и продажа квартир, ипотека, материнский капитал и сделки с другими городами.</p>
+        <p class="lead">Новокузнецк. Новостройки, покупка и продажа квартир, ипотека, материнский капитал и сделки с другими городами.</p>
         <p>В недвижимость я пришла из продаж, без опыта. Сначала смотрела и слушала, прошла обучение, потом пошли первые сделки. На них я поняла главное: я помогаю людям переехать, продать или купить, и они за это благодарны.</p>
         <p>За шесть лет работы у меня больше 200 сделок и ни одного негативного отзыва. Это одна из причин, почему я осталась в профессии. Половина сделок проходит с ипотекой, каждая пятая с материнским капиталом.</p>
         <p>Хочу, чтобы в Новокузнецке меня знали как человека, к которому можно прийти с любым вопросом о недвижимости: продать, купить, застраховать, переехать в другой город.</p>
@@ -1090,7 +1090,6 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
       <div class="objects" id="all-sale"></div>
       <div class="more">
         <button class="btn" type="button" id="sale-more" hidden>Показать ещё</button>
-        <a class="btn" href="https://goroda.vt24.ru/public-profile/7e14e96b-7157-4a8d-af9e-015113b1b069" target="_blank" rel="noopener">Все фото на сайте агентства ↗</a>
       </div>
     </div>
   </section>
@@ -1108,7 +1107,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section pt0">
     <div class="wrap">
       <div class="steps" id="full-steps"></div>
-      <div class="warn" style="margin-top:40px">Я специалист по недвижимости, а не юрист и не банк. Юридическое заключение по документам дают юристы агентства «Города», заявку в банк подают ипотечные брокеры агентства.</div>
+      <div class="warn" style="margin-top:40px">Я специалист по недвижимости, а не юрист и не банк. Юридическое заключение по документам дают юристы агентства, заявку в банк подают ипотечные брокеры агентства.</div>
     </div>
   </section>
   <section class="section cta-band">
@@ -1469,7 +1468,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
     <div class="cols">
       <div class="stack" style="gap:12px">
         <b style="font:500 1.6rem/1.1 var(--serif)">Вера Устьянцева</b>
-        <span style="color:color-mix(in srgb,var(--bg) 70%,transparent);font-size:.92rem">Специалист по недвижимости, агентство «Города», Новокузнецк. Новостройки без комиссии для покупателя.</span>
+        <span style="color:color-mix(in srgb,var(--bg) 70%,transparent);font-size:.92rem">Специалист по недвижимости, Новокузнецк. Новостройки без комиссии для покупателя.</span>
       </div>
       <div><h4>Направления</h4><a href="novostroyki/">Новостройки без комиссии</a><a href="prodazha/">Продать квартиру</a><a href="pereezd/">Переезд в другой город</a><a href="obekty/">Объекты в продаже</a><a href="stroitelstvo/">Строительство дома</a><a href="strahovanie/">Страхование</a><a href="#kalkulyator">Калькуляторы</a></div>
       <div><h4>Связаться</h4><a href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a><a href="kontakty/">+7 983 212-69-54</a><a href="https://t.me/pereezd_nvkz" target="_blank" rel="noopener">Канал «Переезжайте один раз»</a><a href="https://vk.ru/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a><a href="https://max.ru/id421814066729_biz" target="_blank" rel="noopener">Канал в MAX</a></div>
@@ -1636,7 +1635,7 @@ drawSale();
 
 /* Просмотр фото */
 const lb = {obj:null, i:0}, lbd = $("#lb");
-function lbShow(){ const o=lb.obj; $("#lb-img").src=o.photos[lb.i]; $("#lb-img").alt=o.title+", фото "+(lb.i+1); $("#lb-title").textContent=o.title+" · "+money(o.price)+" "+o.unit; $("#lb-count").textContent=(lb.i+1)+" из "+o.photos.length+(o.total>o.photos.length?" · всего "+o.total+" фото на сайте агентства":""); }
+function lbShow(){ const o=lb.obj; $("#lb-img").src=o.photos[lb.i]; $("#lb-img").alt=o.title+", фото "+(lb.i+1); $("#lb-title").textContent=o.title+" · "+money(o.price)+" "+o.unit; $("#lb-count").textContent=(lb.i+1)+" из "+o.photos.length; }
 function lbOpen(id){ lb.obj = SALE.items.find(o=>String(o.id)===String(id)); if(!lb.obj) return; lb.i=0; lbShow(); lbd.showModal ? lbd.showModal() : lbd.setAttribute("open",""); }
 function lbStep(k){ const n=lb.obj.photos.length; lb.i=(lb.i+k+n)%n; lbShow(); }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-open]"); if(b) lbOpen(b.dataset.open); });
