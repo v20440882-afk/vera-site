@@ -33,9 +33,9 @@ document.addEventListener("submit",function(e){var r=document.getElementById("f-
 var c=null;try{c=localStorage.getItem(K)}catch(e){}
 if(c==="yes"){load();return}if(c==="no")return;
 function show(){var b=document.createElement("div");b.setAttribute("role","dialog");b.setAttribute("aria-label","Cookie");
-b.style.cssText="position:fixed;left:12px;right:12px;bottom:88px;z-index:9999;max-width:560px;margin:0 auto;background:#fff;color:#222;border:1px solid #ddd;border-radius:12px;padding:14px 16px;box-shadow:0 8px 30px rgba(0,0,0,.18);font:14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif";
-var bs="height:40px;padding:0 16px;border-radius:8px;font:600 14px system-ui,sans-serif;cursor:pointer;";
-b.innerHTML='Сайт использует cookie и Яндекс Метрику, чтобы понимать, какие страницы полезны. <a href="/cookies/" style="color:inherit">Подробнее</a><div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button type="button" data-a="yes" style="'+bs+'background:#94653A;color:#fff;border:0">Согласен</button><button type="button" data-a="no" style="'+bs+'background:#fff;color:#222;border:1px solid #ccc">Отказаться</button></div>';
+b.style.cssText="position:fixed;left:10px;right:10px;bottom:84px;z-index:9999;max-width:560px;margin:0 auto;background:#FFF8EE;color:#222;border:2px solid #94653A;border-radius:16px;padding:16px 18px;box-shadow:0 10px 40px rgba(0,0,0,.28);font:16px/1.45 system-ui,-apple-system,Segoe UI,sans-serif";
+var bs="height:48px;padding:0 18px;border-radius:10px;font:600 16px system-ui,sans-serif;cursor:pointer;";
+b.innerHTML='<div style="font-weight:700;font-size:17px;margin-bottom:4px">Разрешите сайту запомнить ваш визит</div>Так я пойму, какие страницы вам полезны, и сделаю сайт удобнее. Сайт использует cookie и Яндекс Метрику. <a href="/cookies/" style="color:inherit">Подробнее</a><div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap"><button type="button" data-a="yes" style="'+bs+'flex:1 1 180px;background:#94653A;color:#fff;border:0">Согласен</button><button type="button" data-a="no" style="'+bs+'flex:0 1 auto;background:#fff;color:#222;border:1px solid #bbb">Отказаться</button></div>';
 b.addEventListener("click",function(e){var a=e.target.getAttribute&&e.target.getAttribute("data-a");if(!a)return;try{localStorage.setItem(K,a)}catch(_){}b.remove();if(a==="yes")load();});
 document.body.appendChild(b);}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",show);else show();
@@ -1640,7 +1640,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
     <p>3 года с последнего обращения или до отзыва согласия.</p>
     <h2>6. Права посетителя</h2>
     <p>Узнать, какие данные обрабатываются, попросить исправить или удалить их, отозвать согласие. Для этого достаточно написать на wera80@mail.ru или в Telegram @Wera80.</p>
-    <p class="note" style="margin-top:28px">Редакция от 22.11.2026.</p>
+    <p class="note" style="margin-top:28px">Редакция от 23.11.2026.</p>
   </div></section>
 </div>
 
