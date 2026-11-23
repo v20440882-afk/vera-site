@@ -95,10 +95,17 @@ p{margin:0}
 
 /* Шапка */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.who-grid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:32px;align-items:center}
+.who-grid img{width:100%;height:auto;border-radius:200px 200px 16px 16px;object-fit:cover}
+.who-revs{display:grid;gap:10px}
+.who-revs small{display:block;font-style:normal;color:var(--muted);margin-top:4px}
+.who-revs blockquote{margin:0;padding:12px 16px;background:var(--card);border-left:3px solid var(--bronze);border-radius:8px;font-style:italic}
+@media (max-width:640px){.who-grid{grid-template-columns:1fr;gap:18px}.who-grid img{max-width:220px;margin:0 auto}}
 .promo{display:block;background:var(--bronze);color:var(--bronze-ink);text-align:center;font:600 .9rem/1.35 var(--sans);padding:8px 14px;text-decoration:none}
 .promo:hover{filter:brightness(1.08)}
 .promo u{text-underline-offset:3px;white-space:nowrap}
 .promo .ps{display:none}
+html[data-page="novostroyki"] .promo{display:none}
 @media (max-width:640px){.promo{font-size:.82rem;padding:6px 10px}.promo .pl{display:none}.promo .ps{display:inline}}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
 .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
@@ -678,7 +685,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
       <div class="head-row"><div><span class="eyebrow">В работе</span><h2>Как проходит мой день</h2></div></div>
       <div class="strip">
         <figure><img src="img/work-call.jpg" alt="Вера разговаривает по телефону с клиентом" width="667" height="1000" loading="lazy"><figcaption>На связи с клиентами</figcaption></figure>
-        <figure><img src="img/work-phone.jpg" alt="Вера смотрит объявления в телефоне" width="667" height="1000" loading="lazy"><figcaption>Подбираю варианты</figcaption></figure>
+        <figure><img src="img/work-phone-2.jpg" alt="Вера смотрит объявления в телефоне" width="667" height="1000" loading="lazy"><figcaption>Подбираю варианты</figcaption></figure>
                 <figure><img src="img/work-flowers.jpg" alt="Вера с букетом цветов" width="664" height="1000" loading="lazy"><figcaption>Радуюсь вместе с клиентами</figcaption></figure>
       </div>
     </div>
@@ -767,6 +774,22 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
       <div class="arch-wrap">
         <div class="arch"><img src="img/r-park.jpg" alt="Новостройка на набережной в Новокузнецке" width="1200" height="848" loading="lazy" style="object-position:62% 50%"></div>
         <div class="seal"><small>Вы платите</small><b>цену застройщика</b><span>и ничего сверху</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section whoami">
+    <div class="wrap who-grid">
+      <img src="img/work-call.jpg" alt="Вера Устьянцева, специалист по недвижимости в Новокузнецке" width="667" height="1000" loading="lazy">
+      <div class="stack" style="gap:14px">
+        <span class="eyebrow">С кем вы будете работать</span>
+        <h2>Вера Устьянцева, специалист по недвижимости</h2>
+        <p>Больше 200 сделок, шесть лет работы без негативных отзывов. Сама веду клиента от подбора до ключей и остаюсь на связи после сделки.</p>
+        <div class="who-revs">
+          <blockquote>«Из всех вариантов вы отобрали нам самый лучший! <…> Нам удалось взять именно ту квартиру, которая больше всего понравилась». <small>— Екатерина, покупка, апрель 2023</small></blockquote>
+          <blockquote>«Мы ей задавали миллион вопросов <…> она всегда отвечала чётко и доброжелательно! <…> Теперь у нас с мужем есть своё гнёздышко!» <small>— покупатели, Фламп, декабрь 2022</small></blockquote>
+        </div>
+        <a class="btn" href="otzyvy/" style="align-self:start">Все отзывы</a>
       </div>
     </div>
   </section>
@@ -944,7 +967,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <div class="facts"><div><b>200+</b><span>сделок</span></div><div><b>24/7</b><span>на связи</span></div><div><b>0 ₽</b><span>комиссия за новостройку</span></div></div>
       </div>
       <div class="arch-wrap">
-        <div class="arch"><img src="img/work-phone.jpg" alt="Вера смотрит объявления в телефоне" width="667" height="1000" loading="lazy"></div>
+        <div class="arch"><img src="img/work-phone-2.jpg" alt="Вера смотрит объявления в телефоне" width="667" height="1000" loading="lazy"></div>
         <div class="seal"><small>Супруги из Новокузнецка</small><b>→ Петербург</b><span>продали квартиру и переехали</span></div>
       </div>
     </div>
@@ -1072,7 +1095,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <div class="facts"><div><b>Все</b><span>виды страхования</span></div><div><b>Онлайн</b><span>без поездок в офис</span></div><div><b>24/7</b><span>на связи</span></div></div>
       </div>
       <div class="arch-wrap">
-        <div class="arch"><img src="img/work-phone.jpg" alt="Вера Устьянцева с телефоном" width="667" height="1000" loading="lazy"></div>
+        <div class="arch"><img src="img/work-phone-2.jpg" alt="Вера Устьянцева с телефоном" width="667" height="1000" loading="lazy"></div>
         <div class="seal"><small>При ипотеке</small><b>напомню</b><span>о продлении страховки через год</span></div>
       </div>
     </div>
@@ -1721,8 +1744,9 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
 </footer>
 
 <div class="float-cta">
-  <button class="btn primary" type="button" data-lead="Подбор новостройки">Оставить заявку</button>
-  <a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram</a>
+  <a class="btn" href="https://wa.me/79832126954?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B5%D1%80%D0%B0!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn" href="tel:+79832126954">Позвонить</a>
+  <button class="btn primary" type="button" data-lead="Подбор новостройки">Заявка</button>
 </div>
 
 <script>
@@ -1981,6 +2005,7 @@ function route(){
   if(ALIAS[id]){ anchor=ALIAS[id][1]||null; id=ALIAS[id][0]; }
   const v=views.find(x=>x.dataset.view===id)||views[0];
   currentView=v.dataset.view;
+  document.documentElement.setAttribute("data-page",currentView);
   views.forEach(x=>x.hidden=x!==v);
   document.title=v.dataset.title; if(metaDesc) metaDesc.setAttribute("content",v.dataset.desc);
   document.querySelectorAll("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")===(currentView==="glavnaya"?"./":currentView+"/")));
