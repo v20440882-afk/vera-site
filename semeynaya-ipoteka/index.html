@@ -375,6 +375,13 @@ article.read a{color:var(--bronze)}
 .form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(20px,4vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form>*{min-width:0}
 .form .full{grid-column:1/-1}
+.soft-lead{display:inline-block;font-size:.95rem;color:var(--ink);text-decoration:none;padding:10px 14px;border:1px dashed var(--bronze);border-radius:12px;background:var(--card)}
+.soft-lead u{color:var(--bronze);text-underline-offset:3px}
+.form .more summary{cursor:pointer;font-weight:600;font-size:.9rem;color:var(--bronze);padding:4px 0}
+.form .more summary .opt{font-weight:400;color:var(--muted)}
+.form .more-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+.form .more-grid .full{grid-column:1/-1}
+@media (max-width:640px){.form .more-grid{grid-template-columns:1fr}}
 @media (max-width:640px){.form{grid-template-columns:1fr}}
 label.f{display:flex;flex-direction:column;gap:6px;font-size:.86rem;font-weight:600}
 label.f .opt{font-weight:400;color:var(--muted)}
@@ -769,6 +776,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <h1 class="sm">Новостройка по цене застройщика <em>и с сопровождением до ключей</em></h1>
         <p class="lead">Комиссию за покупку новостройки со мной вы не платите. Цена та же, что в офисе продаж, а подбор, расчёт ипотеки, проверку и сделку я беру на себя.</p>
         <div class="btns"><button class="btn primary" type="button" data-lead="Подбор новостройки">Подобрать новостройку</button><a class="btn" href="kalkulyator-semeynoy-ipoteki/">Посчитать семейную ипотеку</a></div>
+        <a class="soft-lead" href="https://wa.me/79832126954?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B5%D1%80%D0%B0%21%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%87%D0%B5%D0%BA-%D0%BB%D0%B8%D1%81%D1%82%20%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B1%D0%B5%D0%B7%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA%C2%BB." target="_blank" rel="noopener">Пока присматриваетесь? <u>Получите чек-лист «Новостройка без ошибок» в WhatsApp</u> — бесплатно</a>
         <div class="facts"><div><b>0 ₽</b><span>комиссия покупателя</span></div><div><b>200+</b><span>сделок</span></div><div><b>24/7</b><span>на связи</span></div></div>
       </div>
       <div class="arch-wrap">
@@ -1694,6 +1702,8 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   </label>
   <label class="f">Имя<input type="text" id="f-name" autocomplete="given-name" placeholder="Например, Анна"></label>
   <label class="f">Телефон или мессенджер<input type="text" id="f-contact" autocomplete="tel" placeholder="+7… или @ник"></label>
+  <details class="full more"><summary>Добавить подробности <span class="opt">необязательно: район, бюджет, комнаты, сроки</span></summary>
+  <div class="more-grid">
   <label class="f">Город или район <span class="opt">необязательно</span><input type="text" id="f-city" placeholder="Например, Центральный район"></label>
   <label class="f">Бюджет <span class="opt">необязательно</span>
     <select id="f-budget"><option value="">Пока не знаю</option><option>до 4 млн ₽</option><option>4–6 млн ₽</option><option>6–8 млн ₽</option><option>8–12 млн ₽</option><option>больше 12 млн ₽</option></select></label>
@@ -1702,6 +1712,8 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <label class="f">Когда планируете <span class="opt">необязательно</span>
     <select id="f-when"><option value="">Пока присматриваюсь</option><option>В ближайший месяц</option><option>В течение 3 месяцев</option><option>В течение полугода</option><option>Позже</option></select></label>
   <label class="f full">Коротко о ситуации <span class="opt">необязательно</span><textarea id="f-note" placeholder="Например: семья из 4 человек, хотим трёшку, есть маткапитал"></textarea></label>
+  </div>
+  </details>
   <label class="consent full"><input type="checkbox" id="f-consent"><span>Я согласен(на), чтобы Вера Устьянцева обработала мои имя и контакты, чтобы ответить на заявку. Подробнее — в <a class="link" href="politika/">политике обработки персональных данных</a>.</span></label>
   <div class="err full" id="f-err" role="alert"></div>
   <div class="full btns"><button class="btn primary" type="submit">Отправить заявку</button></div>
