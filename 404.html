@@ -95,6 +95,11 @@ p{margin:0}
 
 /* Шапка */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.promo{display:block;background:var(--bronze);color:var(--bronze-ink);text-align:center;font:600 .9rem/1.35 var(--sans);padding:8px 14px;text-decoration:none}
+.promo:hover{filter:brightness(1.08)}
+.promo u{text-underline-offset:3px;white-space:nowrap}
+.promo .ps{display:none}
+@media (max-width:640px){.promo{font-size:.82rem;padding:6px 10px}.promo .pl{display:none}.promo .ps{display:inline}}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
 .logo{display:flex;flex-direction:column;text-decoration:none;line-height:1.1}
 .logo b{font:600 1.35rem/1 var(--serif)}
@@ -405,6 +410,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
 </head>
 <body>
 <header class="top">
+  <a class="promo" href="strahovanie/">🛡 <span class="pl">Помогу оформить любую страховку онлайн: ОСАГО, КАСКО, ипотека, путешествия</span><span class="ps">Любая страховка онлайн: ОСАГО, КАСКО, ипотека</span> — <u>подробнее</u></a>
   <div class="wrap bar">
     <a class="logo" href="./"><b>Вера Устьянцева</b><span>Недвижимость · Новокузнецк</span></a>
     <nav class="main" aria-label="Разделы">
