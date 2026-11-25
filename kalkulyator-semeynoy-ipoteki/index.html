@@ -22,7 +22,7 @@ function load(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[
 ym(ID,"init",{webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});}
 function goal(g){if(typeof window.ym==="function"){ym(ID,"reachGoal",g);ym(ID,"reachGoal","kontakt");}}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=(a.getAttribute("href")||"").toLowerCase();
-if(h.indexOf("wa.me/")>-1||h.indexOf("whatsapp")>-1)goal("whatsapp");else if(h.indexOf("t.me/wera80")>-1)goal("telegram");else if(h.indexOf("max.ru/")>-1)goal("max");else if(h.indexOf("tel:")===0)goal("zvonok");},true);
+if(h.indexOf("wa.me/")>-1||h.indexOf("whatsapp")>-1)goal("whatsapp");else if(h.indexOf("t.me/wera80")>-1)goal("telegram");else if(h.indexOf("max.ru/")>-1)goal("max");else if(h.indexOf("tel:")===0)goal("zvonok");else if(h.indexOf("vk.me/")>-1)goal("vk");else if(h.indexOf("sms:")===0)goal("sms");else if(h.indexOf("mailto:")===0)goal("pochta");},true);
 document.addEventListener("submit",function(e){var r=document.getElementById("f-result");if(e.target&&e.target.id==="lead"&&r&&!r.hidden&&typeof window.ym==="function")ym(ID,"reachGoal","zayavka");});
 var c=null;try{c=localStorage.getItem(K)}catch(e){}
 if(c==="yes"){load();return}if(c==="no")return;
@@ -378,6 +378,9 @@ ul.facts b { color: var(--ink); }
           <span class="handle"><a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a></span>
           <a class="btn-link" href="tel:+79832126954">Позвонить</a>
           <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="sms:+79832126954">СМС</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:wera80@mail.ru">Почта</a>
           <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
           <span class="copied" hidden></span>
         </div>
@@ -469,6 +472,9 @@ ul.facts b { color: var(--ink); }
           <span class="handle"><a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a></span>
           <a class="btn-link" href="tel:+79832126954">Позвонить</a>
           <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="sms:+79832126954">СМС</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
+          <a class="btn-ghost" style="display:inline-flex;align-items:center;text-decoration:none" href="mailto:wera80@mail.ru">Почта</a>
           <button type="button" class="btn-ghost copy" data-copy="+79832126954">Скопировать номер</button>
           <span class="copied" hidden></span>
         </div>

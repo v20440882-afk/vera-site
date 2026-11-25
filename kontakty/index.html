@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <base href="/">
 <title>Контакты и запись на консультацию — Вера Устьянцева, Новокузнецк</title>
-<meta name="description" content="Запишитесь на консультацию: Telegram @Wera80, телефон +7 983 212-69-54 (WhatsApp, Telegram, MAX).">
+<meta name="description" content="Запишитесь на консультацию: позвоните или напишите +7 983 212-69-54 — СМС, MAX, ВКонтакте, WhatsApp, Telegram или на почту.">
 <meta name="keywords" content="новостройки Новокузнецк, купить квартиру Новокузнецк, продать квартиру Новокузнецк, новостройки без комиссии, семейная ипотека Новокузнецк, риелтор Новокузнецк, специалист по недвижимости Новокузнецк">
 <meta property="og:title" content="Контакты и запись на консультацию — Вера Устьянцева, Новокузнецк">
-<meta property="og:description" content="Запишитесь на консультацию: Telegram @Wera80, телефон +7 983 212-69-54 (WhatsApp, Telegram, MAX).">
+<meta property="og:description" content="Запишитесь на консультацию: позвоните или напишите +7 983 212-69-54 — СМС, MAX, ВКонтакте, WhatsApp, Telegram или на почту.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <link rel="canonical" href="https://vera-nvkz.ru/kontakty/">
@@ -28,7 +28,7 @@ function load(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[
 ym(ID,"init",{webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});}
 function goal(g){if(typeof window.ym==="function"){ym(ID,"reachGoal",g);ym(ID,"reachGoal","kontakt");}}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=(a.getAttribute("href")||"").toLowerCase();
-if(h.indexOf("wa.me/")>-1||h.indexOf("whatsapp")>-1)goal("whatsapp");else if(h.indexOf("t.me/wera80")>-1)goal("telegram");else if(h.indexOf("max.ru/")>-1)goal("max");else if(h.indexOf("tel:")===0)goal("zvonok");},true);
+if(h.indexOf("wa.me/")>-1||h.indexOf("whatsapp")>-1)goal("whatsapp");else if(h.indexOf("t.me/wera80")>-1)goal("telegram");else if(h.indexOf("max.ru/")>-1)goal("max");else if(h.indexOf("tel:")===0)goal("zvonok");else if(h.indexOf("vk.me/")>-1)goal("vk");else if(h.indexOf("sms:")===0)goal("sms");else if(h.indexOf("mailto:")===0)goal("pochta");},true);
 document.addEventListener("submit",function(e){var r=document.getElementById("f-result");if(e.target&&e.target.id==="lead"&&r&&!r.hidden&&typeof window.ym==="function")ym(ID,"reachGoal","zayavka");});
 var c=null;try{c=localStorage.getItem(K)}catch(e){}
 if(c==="yes"){load();return}if(c==="no")return;
@@ -414,6 +414,14 @@ footer a{display:block;text-decoration:none;color:color-mix(in srgb,var(--bg) 80
 footer a:hover{color:var(--bg)}
 footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent);margin-top:36px;border-top:1px solid color-mix(in srgb,var(--bg) 18%,transparent);padding-top:20px;display:flex;flex-direction:column;gap:6px}
 
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ways .btn{min-height:52px;padding:0 14px;cursor:pointer}
+.ways .wide{grid-column:1/-1}
+@media (max-width:360px){.ways{grid-template-columns:1fr}}
+@media (hover:hover) and (pointer:fine){.only-phone{display:none!important}}
+.linklike{background:none;border:0;padding:0;font:inherit;font-weight:600;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+footer .linklike{display:block;font-weight:400;font-size:.92rem;text-decoration:none;color:color-mix(in srgb,var(--bg) 80%,transparent);padding:4px 0;text-align:left}
+footer .linklike:hover{color:var(--bg)}
 .float-cta{display:none}
 @media (max-width:760px){
   .float-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
@@ -710,7 +718,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
           <button class="btn primary" type="button" data-lead="Подбор новостройки">Подобрать квартиру</button>
           <button class="btn" type="button" data-lead="Вопрос специалисту">Задать вопрос специалисту</button>
         </div>
-        <p class="note">Telegram @Wera80 · <a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a> (WhatsApp, Telegram, MAX)</p>
+        <p class="note"><a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a> — звонок, СМС, MAX, WhatsApp, Telegram · <button class="linklike" type="button" data-write>все способы связи</button></p>
       </div>
     </div>
   </section>
@@ -776,7 +784,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <h1 class="sm">Новостройка по цене застройщика <em>и с сопровождением до ключей</em></h1>
         <p class="lead">Комиссию за покупку новостройки со мной вы не платите. Цена та же, что в офисе продаж, а подбор, расчёт ипотеки, проверку и сделку я беру на себя.</p>
         <div class="btns"><button class="btn primary" type="button" data-lead="Подбор новостройки">Подобрать новостройку</button><a class="btn" href="kalkulyator-semeynoy-ipoteki/">Посчитать семейную ипотеку</a></div>
-        <a class="soft-lead" href="https://wa.me/79832126954?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B5%D1%80%D0%B0%21%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%87%D0%B5%D0%BA-%D0%BB%D0%B8%D1%81%D1%82%20%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0%20%D0%B1%D0%B5%D0%B7%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA%C2%BB." target="_blank" rel="noopener">Пока присматриваетесь? <u>Получите чек-лист «Новостройка без ошибок» в WhatsApp</u> — бесплатно</a>
+        <button class="soft-lead" type="button" style="font-family:inherit;text-align:left;cursor:pointer" data-write="Здравствуйте, Вера! Пришлите, пожалуйста, чек-лист «Новостройка без ошибок».">Пока присматриваетесь? <u>Получите чек-лист «Новостройка без ошибок»</u> — бесплатно, пришлю куда удобно</button>
         <div class="facts"><div><b>0 ₽</b><span>комиссия покупателя</span></div><div><b>200+</b><span>сделок</span></div><div><b>24/7</b><span>на связи</span></div></div>
       </div>
       <div class="arch-wrap">
@@ -908,7 +916,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section cta-band">
     <div class="wrap cta-inner">
       <div class="stack"><h2>Подберу новостройку под ваш бюджет</h2><p class="lead">Напишите, в каком городе и за какую сумму ищете. Отвечу и на берегу скажу, что реально.</p></div>
-      <div class="btns"><button class="btn primary" type="button" data-lead="Подбор новостройки">Подобрать квартиру</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a></div>
+      <div class="btns"><button class="btn primary" type="button" data-lead="Подбор новостройки">Подобрать квартиру</button><button class="btn" type="button" data-write>Позвонить или написать</button></div>
     </div>
   </section>
 </div>
@@ -958,7 +966,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section cta-band">
     <div class="wrap cta-inner">
       <div class="stack"><h2>Узнайте, за сколько можно продать вашу квартиру</h2><p class="lead">Напишите район, площадь и этаж. Подскажу по цене и срокам и скажу, с чего начать.</p></div>
-      <div class="btns"><button class="btn primary" type="button" data-lead="Продать квартиру">Оставить заявку</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a></div>
+      <div class="btns"><button class="btn primary" type="button" data-lead="Продать квартиру">Оставить заявку</button><button class="btn" type="button" data-write>Позвонить или написать</button></div>
     </div>
   </section>
 </div>
@@ -1009,7 +1017,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section cta-band">
     <div class="wrap cta-inner">
       <div class="stack"><h2>Расскажите, куда переезжаете</h2><p class="lead">Напишите город и что хотите купить. Скажу на берегу, как это лучше сделать и с чего начать.</p></div>
-      <div class="btns"><button class="btn primary" type="button" data-lead="Переезд в другой город">Оставить заявку</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a></div>
+      <div class="btns"><button class="btn primary" type="button" data-lead="Переезд в другой город">Оставить заявку</button><button class="btn" type="button" data-write>Позвонить или написать</button></div>
     </div>
   </section>
 </div>
@@ -1086,7 +1094,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section cta-band">
     <div class="wrap cta-inner">
       <div class="stack"><h2>Хотите свой дом?</h2><p class="lead">Расскажите, где хотите жить, какой дом нужен, есть ли дети или работа в IT. Скажу на берегу, подходит ли ипотека и с чего начать.</p></div>
-      <div class="btns"><button class="btn primary" type="button" data-lead="Строительство дома">Оставить заявку</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a></div>
+      <div class="btns"><button class="btn primary" type="button" data-lead="Строительство дома">Оставить заявку</button><button class="btn" type="button" data-write>Позвонить или написать</button></div>
     </div>
   </section>
 </div>
@@ -1099,7 +1107,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <span class="eyebrow">Страхование · для всех желающих</span>
         <h1 class="sm">Помогу оформить <em>любую страховку</em></h1>
         <p class="lead">Не только по ипотеке: машина, путешествие, здоровье, жильё. Подскажу и помогу оформить. Не обязательно быть моим клиентом по сделке, и всё можно сделать онлайн.</p>
-        <div class="btns"><button class="btn primary" type="button" data-lead="Страхование">Оформить страховку</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Спросить в Telegram</a></div>
+        <div class="btns"><button class="btn primary" type="button" data-lead="Страхование">Оформить страховку</button><button class="btn" type="button" data-write="Здравствуйте, Вера! Вопрос по страхованию.">Позвонить или написать</button></div>
         <div class="facts"><div><b>Все</b><span>виды страхования</span></div><div><b>Онлайн</b><span>без поездок в офис</span></div><div><b>24/7</b><span>на связи</span></div></div>
       </div>
       <div class="arch-wrap">
@@ -1125,7 +1133,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <section class="section cta-band">
     <div class="wrap cta-inner">
       <div class="stack"><h2>Что хотите застраховать?</h2><p class="lead">Напишите, какая страховка нужна. Отвечу и помогу оформить, можно онлайн.</p></div>
-      <div class="btns"><button class="btn primary" type="button" data-lead="Страхование">Оставить заявку</button><a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a></div>
+      <div class="btns"><button class="btn primary" type="button" data-lead="Страхование">Оставить заявку</button><button class="btn" type="button" data-write>Позвонить или написать</button></div>
     </div>
   </section>
 </div>
@@ -1636,20 +1644,24 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
 </div>
 
 <!-- ================= КОНТАКТЫ ================= -->
-<div data-view="kontakty" data-title="Контакты и запись на консультацию — Вера Устьянцева, Новокузнецк" data-desc="Запишитесь на консультацию: Telegram @Wera80, телефон +7 983 212-69-54 (WhatsApp, Telegram, MAX).">
+<div data-view="kontakty" data-title="Контакты и запись на консультацию — Вера Устьянцева, Новокузнецк" data-desc="Запишитесь на консультацию: позвоните или напишите +7 983 212-69-54 — СМС, MAX, ВКонтакте, WhatsApp, Telegram или на почту.">
   <section class="hero">
     <div class="wrap grid2">
       <div class="stack" style="gap:22px">
         <span class="eyebrow">Контакты</span>
         <h1 class="sm">Запишитесь на консультацию</h1>
-        <p class="lead">Заполните заявку: она откроется готовым сообщением в WhatsApp или скопируется для Telegram и MAX. Отвечу сама и на берегу скажу, смогу ли помочь.</p>
+        <p class="lead">Позвоните или напишите, где вам удобно. Можно заполнить заявку: получится готовое сообщение, которое вы отправите по СМС, на почту или в любой мессенджер. Отвечу сама и на берегу скажу, смогу ли помочь.</p>
         <div class="contact-list">
+          <div><span>Позвонить</span><a href="tel:+79832126954">+7 983 212-69-54</a></div>
+          <div class="only-phone"><span>СМС</span><a href="sms:+79832126954">Написать СМС</a></div>
+          <div><span>MAX</span><button class="linklike" type="button" data-max>По номеру телефона</button></div>
+          <div><span>ВКонтакте</span><a href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">Написать сообщение</a></div>
+          <div><span>Почта</span><a href="mailto:wera80@mail.ru">wera80@mail.ru</a></div>
+          <div><span>WhatsApp</span><a href="https://wa.me/79832126954" target="_blank" rel="noopener">Написать</a></div>
           <div><span>Telegram</span><a href="https://t.me/Wera80" target="_blank" rel="noopener">@Wera80</a></div>
-          <div><span>Телефон · WhatsApp, Telegram, MAX</span><b><a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a></b></div>
-          <div><span>Почта</span><b>wera80@mail.ru</b></div>
           <div><span>Город</span><b>Новокузнецк, Кемеровская область — Кузбасс, и другие города</b></div>
           <div><span>Канал «Переезжайте один раз»</span><a href="https://t.me/pereezd_nvkz" target="_blank" rel="noopener">t.me/pereezd_nvkz</a></div>
-          <div><span>ВКонтакте</span><a href="https://vk.ru/veraustyantseva" target="_blank" rel="noopener">vk.ru/veraustyantseva</a></div>
+          <div><span>Страница ВКонтакте</span><a href="https://vk.ru/veraustyantseva" target="_blank" rel="noopener">vk.ru/veraustyantseva</a></div>
           <div><span>Канал в MAX</span><a href="https://max.ru/id421814066729_biz" target="_blank" rel="noopener">Открыть канал</a></div>
           <div><span>Instagram*</span><a href="https://instagram.com/vera_rieltor_nvkz" target="_blank" rel="noopener">vera_rieltor_nvkz</a></div>
         </div>
@@ -1672,12 +1684,12 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
     <h2>3. Зачем</h2>
     <p>Чтобы ответить на заявку, проконсультировать и подобрать недвижимость. Данные не продаются и не передаются третьим лицам, кроме случаев, когда это нужно для сделки и посетитель с этим согласен.</p>
     <h2>4. Как это устроено на сайте</h2>
-    <p>Сайт сам не хранит и не отправляет заявки. Посетитель видит готовый текст и сам отправляет его в WhatsApp, Telegram или MAX. Данные попадают в переписку с оператором в выбранном мессенджере.</p>
+    <p>Сайт сам не хранит и не отправляет заявки. Посетитель видит готовый текст и сам отправляет его по СМС, на почту или в мессенджер: MAX, ВКонтакте, WhatsApp, Telegram. Данные попадают в переписку с оператором тем способом, который посетитель выбрал.</p>
     <h2>5. Сколько хранятся</h2>
     <p>3 года с последнего обращения или до отзыва согласия.</p>
     <h2>6. Права посетителя</h2>
     <p>Узнать, какие данные обрабатываются, попросить исправить или удалить их, отозвать согласие. Для этого достаточно написать на wera80@mail.ru или в Telegram @Wera80.</p>
-    <p class="note" style="margin-top:28px">Редакция от 23.11.2026.</p>
+    <p class="note" style="margin-top:28px">Редакция от 25.11.2026.</p>
   </div></section>
 </div>
 
@@ -1701,7 +1713,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
     </select>
   </label>
   <label class="f">Имя<input type="text" id="f-name" autocomplete="given-name" placeholder="Например, Анна"></label>
-  <label class="f">Телефон или мессенджер<input type="text" id="f-contact" autocomplete="tel" placeholder="+7… или @ник"></label>
+  <label class="f">Телефон, почта или ник<input type="text" id="f-contact" autocomplete="tel" placeholder="+7…, почта или @ник"></label>
   <details class="full more"><summary>Добавить подробности <span class="opt">необязательно: район, бюджет, комнаты, сроки</span></summary>
   <div class="more-grid">
   <label class="f">Город или район <span class="opt">необязательно</span><input type="text" id="f-city" placeholder="Например, Центральный район"></label>
@@ -1720,12 +1732,17 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
   <div class="full result" id="f-result" hidden>
     <b>Заявка готова. Осталось отправить её мне:</b>
     <pre id="f-text"></pre>
-    <div class="btns">
-      <a class="btn primary" id="f-wa" href="https://wa.me/79832126954" target="_blank" rel="noopener">Открыть в WhatsApp</a>
+    <div class="ways">
+      <button class="btn" type="button" data-max>MAX</button>
+      <a class="btn" data-ch="vk" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
+      <a class="btn only-phone" data-ch="sms" href="sms:+79832126954">СМС</a>
+      <a class="btn" data-ch="mail" href="mailto:wera80@mail.ru">Почта</a>
+      <a class="btn" data-ch="wa" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" data-ch="tg" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram</a>
       <button class="btn" type="button" id="f-copy">Скопировать текст</button>
-      <a class="btn" href="https://t.me/Wera80" target="_blank" rel="noopener">Открыть Telegram</a>
+      <a class="btn" href="tel:+79832126954">Позвонить</a>
     </div>
-    <p class="note" id="f-copied">В Telegram и MAX вставьте скопированный текст в чат с @Wera80 или по номеру <a href="tel:+79832126954" style="color:inherit">+7 983 212-69-54</a>. Сайт ничего не хранит и не отправляет сам.</p>
+    <p class="note" id="f-copied" role="status">В СМС, почте и WhatsApp текст подставится сам. Для MAX, ВКонтакте и Telegram он скопируется — вставьте его в чат. Сайт ничего не хранит и не отправляет сам.</p>
   </div>
 </form>
 
@@ -1745,7 +1762,7 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
         <span style="color:color-mix(in srgb,var(--bg) 70%,transparent);font-size:.92rem">Специалист по недвижимости, Новокузнецк. Новостройки без комиссии для покупателя.</span>
       </div>
       <div><h4>Направления</h4><a href="novostroyki/">Новостройки без комиссии</a><a href="prodazha/">Продать квартиру</a><a href="pereezd/">Переезд в другой город</a><a href="obekty/">Объекты в продаже</a><a href="stroitelstvo/">Строительство дома</a><a href="strahovanie/">Страхование</a><a href="#kalkulyator">Калькуляторы</a></div>
-      <div><h4>Связаться</h4><a href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a><a href="tel:+79832126954">+7 983 212-69-54</a><a href="https://t.me/pereezd_nvkz" target="_blank" rel="noopener">Канал «Переезжайте один раз»</a><a href="https://vk.ru/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a><a href="https://max.ru/id421814066729_biz" target="_blank" rel="noopener">Канал в MAX</a></div>
+      <div><h4>Связаться</h4><a href="tel:+79832126954">+7 983 212-69-54</a><button class="linklike" type="button" data-write>Написать: MAX, ВК, СМС, почта…</button><a href="mailto:wera80@mail.ru">wera80@mail.ru</a><a href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram @Wera80</a><a href="https://t.me/pereezd_nvkz" target="_blank" rel="noopener">Канал «Переезжайте один раз»</a><a href="https://vk.ru/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a><a href="https://max.ru/id421814066729_biz" target="_blank" rel="noopener">Канал в MAX</a></div>
       <div><h4>Ещё</h4><a href="o-sebe/">Обо мне</a><a href="materialy/">Полезные материалы</a><a href="otzyvy/">Отзывы</a><a href="politika/">Политика обработки персональных данных</a><a href="cookies/">Cookie и аналитика</a></div>
     </div>
     <div class="small">
@@ -1756,10 +1773,25 @@ footer .small{font-size:.78rem;color:color-mix(in srgb,var(--bg) 55%,transparent
 </footer>
 
 <div class="float-cta">
-  <a class="btn" href="https://wa.me/79832126954?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%92%D0%B5%D1%80%D0%B0!%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0." target="_blank" rel="noopener">WhatsApp</a>
   <a class="btn" href="tel:+79832126954">Позвонить</a>
+  <button class="btn" type="button" data-write>Написать</button>
   <button class="btn primary" type="button" data-lead="Подбор новостройки">Заявка</button>
 </div>
+
+<!-- Окно «Как со мной связаться»: открывается кнопками data-write, текст сообщения — в data-write="…" -->
+<dialog class="lead-dlg" id="write-dlg" aria-label="Как связаться с Верой"><div class="form">
+  <div class="full" style="display:flex;justify-content:space-between;gap:12px;align-items:start"><div class="stack" style="gap:6px"><span class="eyebrow">Связаться</span><h3 style="font-size:1.8rem">Как вам удобно?</h3></div><button class="x" type="button" id="write-x" aria-label="Закрыть">✕</button></div>
+  <div class="full ways">
+    <a class="btn primary wide" href="tel:+79832126954">Позвонить +7 983 212-69-54</a>
+    <button class="btn" type="button" data-max>MAX</button>
+    <a class="btn" data-ch="vk" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
+    <a class="btn only-phone" data-ch="sms" href="sms:+79832126954">СМС</a>
+    <a class="btn" data-ch="mail" href="mailto:wera80@mail.ru">Почта</a>
+    <a class="btn" data-ch="wa" href="https://wa.me/79832126954" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn" data-ch="tg" href="https://t.me/Wera80" target="_blank" rel="noopener">Telegram</a>
+  </div>
+  <p class="note full" id="write-note" role="status">Нет мессенджеров — просто позвоните или напишите СМС.</p>
+</div></dialog>
 
 <script>
 /* ===== Новостройки. Добавить: скопировать строку и поменять. Названия ЖК и застройщиков не пишем. ===== */
@@ -1992,20 +2024,50 @@ form.addEventListener("submit", e=>{
   e.preventDefault();
   const v = id => $(id).value.trim(), err=$("#f-err"); err.textContent="";
   if(!v("#f-name")){ err.textContent="Напишите, как к вам обращаться."; $("#f-name").focus(); return; }
-  if(!v("#f-contact")){ err.textContent="Оставьте телефон или ник в мессенджере, чтобы я могла ответить."; $("#f-contact").focus(); return; }
+  if(!v("#f-contact")){ err.textContent="Оставьте телефон, почту или ник, чтобы я могла ответить."; $("#f-contact").focus(); return; }
   if(!$("#f-consent").checked){ err.textContent="Отметьте согласие на обработку данных: без него я не смогу ответить на заявку."; return; }
   const text=[`Здравствуйте, Вера! Заявка с сайта: ${v("#f-topic")}.`, `Имя: ${v("#f-name")}`, `Связь: ${v("#f-contact")}`,
     v("#f-city")&&`Город / район: ${v("#f-city")}`, v("#f-budget")&&`Бюджет: ${v("#f-budget")}`, v("#f-rooms")&&`Комнат: ${v("#f-rooms")}`,
     v("#f-when")&&`Срок: ${v("#f-when")}`, v("#f-note")&&`О ситуации: ${v("#f-note")}`].filter(Boolean).join("\n");
   $("#f-text").textContent=text;
-  $("#f-wa").href="https://wa.me/79832126954?text="+encodeURIComponent(text);
+  setWays($("#f-result"), text);
   $("#f-result").hidden=false; $("#f-result").scrollIntoView({behavior:"smooth",block:"nearest"});
 });
+/* ===== Способы связи: окно «Написать» и готовая заявка ===== */
+const TEL="+79832126954", MAX_LINK=""; /* MAX_LINK — личная ссылка Веры в MAX; пока пусто, открываем по номеру */
+const wdlg=$("#write-dlg"); let writeText="";
+function setWays(root, text){
+  const t=encodeURIComponent(text);
+  const set=(ch,h)=>root.querySelectorAll('[data-ch="'+ch+'"]').forEach(a=>a.href=h);
+  set("wa","https://wa.me/79832126954?text="+t); set("sms","sms:"+TEL+"?&body="+t);
+  set("mail","mailto:wera80@mail.ru?subject="+encodeURIComponent("Сообщение с сайта")+"&body="+t);
+}
+function copyText(text, ok, fail){ try{ navigator.clipboard.writeText(text).then(ok,fail); }catch(_){ fail(); } }
+function openWrite(text){
+  closeLead(); writeText=text||"Здравствуйте, Вера! Пишу с сайта."; setWays(wdlg, writeText);
+  $("#write-note").textContent="Нет мессенджеров — просто позвоните или напишите СМС.";
+  wdlg.showModal ? wdlg.showModal() : wdlg.setAttribute("open","");
+}
+function closeWrite(){ wdlg.close ? wdlg.close() : wdlg.removeAttribute("open"); }
+$("#write-x").addEventListener("click", closeWrite);
+wdlg.addEventListener("click", e=>{ if(e.target===wdlg) closeWrite(); });
+document.addEventListener("click", e=>{
+  const w=e.target.closest("[data-write]"); if(w){ e.preventDefault(); openWrite(w.dataset.write); return; }
+  const inForm=!!e.target.closest("#f-result"), note=inForm?$("#f-copied"):$("#write-note"), text=inForm?$("#f-text").textContent:writeText;
+  const c=e.target.closest('[data-ch="vk"],[data-ch="tg"]');
+  if(c){ copyText(text, ()=>note.textContent="Текст скопирован — вставьте его в чат.", ()=>{}); return; }
+  if(e.target.closest("[data-max]")){
+    if(!inForm && !wdlg.open) openWrite();
+    const n=inForm?$("#f-copied"):$("#write-note"), num="+7 983 212-69-54";
+    if(MAX_LINK){ if(inForm) copyText(text, ()=>n.textContent="Текст скопирован — вставьте его в чат MAX.", ()=>{}); window.open(MAX_LINK,"_blank","noopener"); }
+    else if(inForm) copyText(text, ()=>n.textContent="Текст скопирован. Откройте MAX, найдите меня по номеру "+num+" и вставьте текст.", ()=>n.textContent="Откройте MAX и найдите меня по номеру "+num+". Текст заявки скопируйте выше.");
+    else copyText(TEL, ()=>n.textContent="Номер скопирован. Откройте MAX, нажмите поиск и вставьте номер "+num+".", ()=>n.textContent="Откройте MAX и найдите меня по номеру "+num+".");
+    if(typeof window.ym==="function"){ window.ym(114500149,"reachGoal","max"); window.ym(114500149,"reachGoal","kontakt"); }
+  }
+});
 $("#f-copy").addEventListener("click", ()=>{
-  const text=$("#f-text").textContent;
-  const done=()=>$("#f-copied").textContent="Текст скопирован. Вставьте его в чат с @Wera80 в Telegram или в MAX по номеру +7 983 212-69-54.";
   const fallback=()=>{ const r=document.createRange(); r.selectNodeContents($("#f-text")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $("#f-copied").textContent="Текст выделен: скопируйте его и вставьте в чат."; };
-  try{ navigator.clipboard.writeText(text).then(done,fallback); }catch(_){ fallback(); }
+  copyText($("#f-text").textContent, ()=>$("#f-copied").textContent="Текст скопирован. Вставьте его в любой чат или письмо.", fallback);
 });
 
 /* ===== Страницы по адресу после #. Старые ссылки (#top, #uslugi, #kalkulyator, #kak, #keisy, #kontakt) тоже работают. ===== */
@@ -2023,6 +2085,7 @@ function route(){
   document.querySelectorAll("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")===(currentView==="glavnaya"?"./":currentView+"/")));
   $("#mnav").classList.remove("open"); $("#burger").setAttribute("aria-expanded","false");
   if(dlg.open) closeLead();
+  if(wdlg.open) closeWrite();
   placeForm(currentView==="kontakty"?"home":"dlg");
   const el=anchor&&document.getElementById(anchor);
   if(el) setTimeout(()=>window.scrollTo({top:el.getBoundingClientRect().top+scrollY-70,behavior:"instant"}),30);
