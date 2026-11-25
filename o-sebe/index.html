@@ -1654,7 +1654,7 @@ footer .linklike:hover{color:var(--bg)}
         <div class="contact-list">
           <div><span>Позвонить</span><a href="tel:+79832126954">+7 983 212-69-54</a></div>
           <div class="only-phone"><span>СМС</span><a href="sms:+79832126954">Написать СМС</a></div>
-          <div><span>MAX</span><a href="https://max.ru/u/f9LHodD0cOJIJc7tKyv14wq6zXiGb1raQOA9D-B0fByNPHZdiLCGoKtqaGA" target="_blank" rel="noopener">Написать</a></div>
+          <div><span>MAX</span><a href="https://max.ru/u/f9LHodD0cOJIJc7tKyv14wq6zXiGb1raQOA9D-B0fByNPHZdiLCGoKtqaGA" target="_blank" rel="noopener">Написать</a><span style="flex-basis:100%">Если чат не открылся, найдите меня в приложении MAX по номеру телефона</span></div>
           <div><span>ВКонтакте</span><a href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">Написать сообщение</a></div>
           <div><span>Почта</span><a href="mailto:wera80@mail.ru">wera80@mail.ru</a></div>
           <div><span>WhatsApp</span><a href="https://wa.me/79832126954" target="_blank" rel="noopener">Написать</a></div>
@@ -2054,7 +2054,13 @@ wdlg.addEventListener("click", e=>{ if(e.target===wdlg) closeWrite(); });
 document.addEventListener("click", e=>{
   const w=e.target.closest("[data-write]"); if(w){ e.preventDefault(); openWrite(w.dataset.write); return; }
   const inForm=!!e.target.closest("#f-result"), note=inForm?$("#f-copied"):$("#write-note"), text=inForm?$("#f-text").textContent:writeText;
-  const c=e.target.closest('[data-ch="vk"],[data-ch="tg"],[data-ch="max"]');
+  if(e.target.closest('[data-ch="max"]')){
+    const num="+7 983 212-69-54";
+    if(inForm) copyText(text, ()=>note.textContent="Текст скопирован — вставьте его в чат. Если MAX не открылся, откройте приложение MAX и найдите меня по номеру "+num+".", ()=>note.textContent="Если MAX не открылся, откройте приложение MAX и найдите меня по номеру "+num+". Текст заявки — кнопкой «Скопировать текст».");
+    else copyText(TEL, ()=>note.textContent="Если MAX не открылся: номер "+num+" скопирован — откройте приложение MAX, нажмите поиск и вставьте его.", ()=>note.textContent="Если MAX не открылся, откройте приложение MAX и найдите меня по номеру "+num+".");
+    return;
+  }
+  const c=e.target.closest('[data-ch="vk"],[data-ch="tg"]');
   if(c){ copyText(text, ()=>note.textContent="Текст скопирован — вставьте его в чат.", ()=>note.textContent=inForm?"Не получилось скопировать само: нажмите «Скопировать текст» и вставьте его в чат.":"Напишите мне в чат пару слов — отвечу сама."); return; }
 });
 $("#f-copy").addEventListener("click", ()=>{
