@@ -1654,7 +1654,7 @@ footer .linklike:hover{color:var(--bg)}
         <div class="contact-list">
           <div><span>Позвонить</span><a href="tel:+79832126954">+7 983 212-69-54</a></div>
           <div class="only-phone"><span>СМС</span><a href="sms:+79832126954">Написать СМС</a></div>
-          <div><span>MAX</span><button class="linklike" type="button" data-max>По номеру телефона</button></div>
+          <div><span>MAX</span><a href="https://max.ru/u/f9LHodD0cOJIJc7tKyv14wq6zXiGb1raQOA9D-B0fByNPHZdiLCGoKtqaGA" target="_blank" rel="noopener">Написать</a></div>
           <div><span>ВКонтакте</span><a href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">Написать сообщение</a></div>
           <div><span>Почта</span><a href="mailto:wera80@mail.ru">wera80@mail.ru</a></div>
           <div><span>WhatsApp</span><a href="https://wa.me/79832126954" target="_blank" rel="noopener">Написать</a></div>
@@ -1733,7 +1733,7 @@ footer .linklike:hover{color:var(--bg)}
     <b>Заявка готова. Осталось отправить её мне:</b>
     <pre id="f-text"></pre>
     <div class="ways">
-      <button class="btn" type="button" data-max>MAX</button>
+      <a class="btn" data-ch="max" href="https://max.ru/u/f9LHodD0cOJIJc7tKyv14wq6zXiGb1raQOA9D-B0fByNPHZdiLCGoKtqaGA" target="_blank" rel="noopener">MAX</a>
       <a class="btn" data-ch="vk" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
       <a class="btn only-phone" data-ch="sms" href="sms:+79832126954">СМС</a>
       <a class="btn" data-ch="mail" href="mailto:wera80@mail.ru">Почта</a>
@@ -1783,7 +1783,7 @@ footer .linklike:hover{color:var(--bg)}
   <div class="full" style="display:flex;justify-content:space-between;gap:12px;align-items:start"><div class="stack" style="gap:6px"><span class="eyebrow">Связаться</span><h3 style="font-size:1.8rem">Как вам удобно?</h3></div><button class="x" type="button" id="write-x" aria-label="Закрыть">✕</button></div>
   <div class="full ways">
     <a class="btn primary wide" href="tel:+79832126954">Позвонить +7 983 212-69-54</a>
-    <button class="btn" type="button" data-max>MAX</button>
+    <a class="btn" data-ch="max" href="https://max.ru/u/f9LHodD0cOJIJc7tKyv14wq6zXiGb1raQOA9D-B0fByNPHZdiLCGoKtqaGA" target="_blank" rel="noopener">MAX</a>
     <a class="btn" data-ch="vk" href="https://vk.me/veraustyantseva" target="_blank" rel="noopener">ВКонтакте</a>
     <a class="btn only-phone" data-ch="sms" href="sms:+79832126954">СМС</a>
     <a class="btn" data-ch="mail" href="mailto:wera80@mail.ru">Почта</a>
@@ -2034,7 +2034,7 @@ form.addEventListener("submit", e=>{
   $("#f-result").hidden=false; $("#f-result").scrollIntoView({behavior:"smooth",block:"nearest"});
 });
 /* ===== Способы связи: окно «Написать» и готовая заявка ===== */
-const TEL="+79832126954", MAX_LINK=""; /* MAX_LINK — личная ссылка Веры в MAX; пока пусто, открываем по номеру */
+const TEL="+79832126954";
 const wdlg=$("#write-dlg"); let writeText="";
 function setWays(root, text){
   const t=encodeURIComponent(text);
@@ -2054,16 +2054,8 @@ wdlg.addEventListener("click", e=>{ if(e.target===wdlg) closeWrite(); });
 document.addEventListener("click", e=>{
   const w=e.target.closest("[data-write]"); if(w){ e.preventDefault(); openWrite(w.dataset.write); return; }
   const inForm=!!e.target.closest("#f-result"), note=inForm?$("#f-copied"):$("#write-note"), text=inForm?$("#f-text").textContent:writeText;
-  const c=e.target.closest('[data-ch="vk"],[data-ch="tg"]');
-  if(c){ copyText(text, ()=>note.textContent="Текст скопирован — вставьте его в чат.", ()=>{}); return; }
-  if(e.target.closest("[data-max]")){
-    if(!inForm && !wdlg.open) openWrite();
-    const n=inForm?$("#f-copied"):$("#write-note"), num="+7 983 212-69-54";
-    if(MAX_LINK){ if(inForm) copyText(text, ()=>n.textContent="Текст скопирован — вставьте его в чат MAX.", ()=>{}); window.open(MAX_LINK,"_blank","noopener"); }
-    else if(inForm) copyText(text, ()=>n.textContent="Текст скопирован. Откройте MAX, найдите меня по номеру "+num+" и вставьте текст.", ()=>n.textContent="Откройте MAX и найдите меня по номеру "+num+". Текст заявки скопируйте выше.");
-    else copyText(TEL, ()=>n.textContent="Номер скопирован. Откройте MAX, нажмите поиск и вставьте номер "+num+".", ()=>n.textContent="Откройте MAX и найдите меня по номеру "+num+".");
-    if(typeof window.ym==="function"){ window.ym(114500149,"reachGoal","max"); window.ym(114500149,"reachGoal","kontakt"); }
-  }
+  const c=e.target.closest('[data-ch="vk"],[data-ch="tg"],[data-ch="max"]');
+  if(c){ copyText(text, ()=>note.textContent="Текст скопирован — вставьте его в чат.", ()=>note.textContent=inForm?"Не получилось скопировать само: нажмите «Скопировать текст» и вставьте его в чат.":"Напишите мне в чат пару слов — отвечу сама."); return; }
 });
 $("#f-copy").addEventListener("click", ()=>{
   const fallback=()=>{ const r=document.createRange(); r.selectNodeContents($("#f-text")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $("#f-copied").textContent="Текст выделен: скопируйте его и вставьте в чат."; };
